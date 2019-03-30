@@ -42,9 +42,7 @@ namespace FakeGoogleDrive
                 .AddFluentValidation(op => op.RegisterValidatorsFromAssembly(GetType().Assembly))
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDistributedRedisCache(
-                    options => options.Configuration = "FGDRedis.redis.cache.windows.net:6379,password=vCo+YYqJCpJ2lsXDDv9W4WaMfgSAVCDbI7Bt4i+0+oo=,ssl=false,abortConnect=False"
-                );
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
