@@ -1,5 +1,6 @@
 FakeGoogleDrive - some kind of Google Drive clone.
 
+<pre>
 Technical Task:
   -Upload/Download files
   -Create folders
@@ -26,4 +27,4 @@ Architecture:
   On main infrastructional service was applied onion architecture, on SignalRNotificationService was used SignalR Core library.
 Security:
   For user athentification was used JWT tokens, was specified CORS policy with specific whitelist, password are hashing and salting.
-  
+  </pre>
