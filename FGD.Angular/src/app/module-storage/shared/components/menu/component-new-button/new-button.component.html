@@ -1,0 +1,8 @@
+<button [matMenuTriggerFor]="menu"  mat-button> 
+    <img src="assets/output-onlinepngtools.png" alt="plus">
+    <p class="plus-new">New</p>
+</button>
+
+<mat-menu #menu="matMenu">
+        <create-new-folder-menu-item></create-new-folder-menu-item>
+      </mat-menu>

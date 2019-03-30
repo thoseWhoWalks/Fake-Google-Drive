@@ -1,0 +1,137 @@
+.wrapper{
+    border : 1px lightgrey solid ;
+    border-radius: 10px;
+    width: 750px;
+    height: 600px;
+    padding: 40px 0px 0px 0px;   
+}
+
+.sign-up-main-container{  
+    width: 350px;
+    margin: 0px 40px 0px 40px;
+}
+
+.sign-up-main-container p{ 
+    color:black;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.sign-up-img-container{ 
+    width: 300px;
+    margin-top: 120px; 
+    padding-right: 20px;
+    padding-left: 20px;
+} 
+.sign-up-img-container p{
+    color:black;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 30px; 
+}
+ 
+.password-input{
+    align-items: center;
+}
+
+form{ 
+    margin: 30px auto;
+}
+
+.btn{
+    width: 100%;
+   
+    padding-left: 0px;
+}
+
+.btn button{
+    color:white !important;
+    font-weight: 500;
+}
+
+.button-area{
+    align-items: center;
+}
+
+.button-area a{
+        align-self: center;
+        font-weight: 500; 
+        font-size:14px;   
+ }
+  
+ .button-area  a:hover{ 
+        text-decoration: none;  
+ }
+ 
+
+.half-width-input{
+    width:45%;
+}
+
+.half-width-input > *{
+    width: 100%;
+}
+
+.full-width-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width-input > *{
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper{
+        width: 550px;
+        height: 520px;
+        padding: 10px 0px 0px 0px;   
+    }
+
+    .sign-up-main-container{  
+        width: 100%; 
+    }
+
+    form{ 
+        width:100%; 
+        margin: 10px auto;
+    }
+ 
+}
+
+@media screen and (max-width: 570px) {
+    .wrapper{
+        width: 450px;
+        height: 520px;
+        padding: 10px 0px 0px 0px;   
+    }
+
+    .sign-up-main-container{  
+        width: 95%; 
+    }
+
+    form{ 
+        width:100%; 
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .wrapper{
+        width: 400px;
+        height: 520px;
+        padding: 10px 0px 0px 0px;   
+    }
+
+    .sign-up-main-container{  
+        width: 95%; 
+    }
+
+    form{ 
+        width:100%; 
+        margin: 10px auto;
+    }
+ 
+}
+ 

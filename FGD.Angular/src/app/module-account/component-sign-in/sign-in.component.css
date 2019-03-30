@@ -1,0 +1,89 @@
+a{ 
+    font-weight: 500;   
+}
+
+a:hover{ 
+    text-decoration: none;  
+}
+
+.wrapper{
+    width: 450px;
+    height: 500px;
+    border : 1px lightgrey solid ;
+    border-radius: 10px;  
+    padding: 48px 40px 36px 40px;
+}
+ 
+form{ 
+    width:100%; 
+    margin: 20px auto;
+}
+ 
+form > div{
+    padding: 10px 0px 3px 0px;
+}
+
+.full-width-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width-input > * {
+    width: 100%;
+}
+  
+.sign-in-form-incognito p{
+    color: gray; 
+    font-size: 15px; 
+    font-stretch: condensed;
+}
+
+.button-area{
+    align-items: center;
+}
+
+.mat-button-wrapper{
+    color: whitesmoke
+}
+
+.button-area a{
+    font-size:14px; 
+} 
+
+mat-raised-button > *{
+    color:white;
+}
+
+mat-raised-button:hover{
+    color:white;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper{
+        width: 350px;
+        height: 450px;
+        border : 1px lightgrey solid ;
+        border-radius: 10px;  
+        padding: 18px 18px 18px 18px;
+    }
+
+    form{ 
+        width:100%; 
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .wrapper{
+        width: 300px;
+        height: 450px;
+        border : 1px lightgrey solid ;
+        border-radius: 10px;  
+        padding: 10px 10px 10px 10px;
+    }
+
+    form{ 
+        width:100%; 
+        margin: 25px auto;
+    }
+}

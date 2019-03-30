@@ -1,0 +1,35 @@
+.sign-in-header > *{
+    color:black;
+} 
+
+.sign-in-header-title span:nth-child(1){
+    color:rgb(85, 85, 228);
+}
+.sign-in-header-title span:nth-child(2){
+    color:rgb(238, 22, 22);
+}
+.sign-in-header-title span:nth-child(3){
+    color:rgb(255, 230, 0);
+}
+.sign-in-header-title span:nth-child(4){
+    color:rgb(80, 80, 233);
+}
+.sign-in-header-title span:nth-child(5){
+    color:rgb(18, 218, 18);
+}
+.sign-in-header-title span:nth-child(6){
+    color:rgb(238, 22, 22);
+}
+
+.sign-in{
+    font-size: 22px;
+}
+
+.sign-in-text{
+    font-size: 16px;
+}
+
+.sign-in-header-title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}

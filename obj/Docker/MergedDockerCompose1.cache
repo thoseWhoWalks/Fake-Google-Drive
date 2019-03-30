@@ -1,0 +1,41 @@
+networks:
+  default:
+    external:
+      name: nat
+  static-network:
+    ipam:
+      config:
+      - subnet: 172.20.0.0/16
+services:
+  fgd.api:
+    build:
+      context: C:\fakegoogledrive
+      dockerfile: FakeGoogleDrive\Dockerfile
+      target: base
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus
+      /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: c:\.nuget\fallbackpackages
+      NUGET_PACKAGES: C:\.nuget\packages
+    image: fgdapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath c:\.nuget\packages
+        --additionalProbingPath c:\.nuget\fallbackpackages  bin\Debug\netcoreapp2.2\FGD.Api.dll'
+      com.microsoft.visualstudio.debuggee.killprogram: C:\remote_debugger\x64\utils\KillProcess.exe
+        dotnet.exe
+      com.microsoft.visualstudio.debuggee.program: '"C:\Program Files\dotnet\dotnet.exe"'
+      com.microsoft.visualstudio.debuggee.workingdirectory: C:\app
+    networks:
+      static-network:
+        ipv4_address: 172.20.129.2
+    ports:
+    - published: 5000
+      target: 80
+    volumes:
+    - C:\fakegoogledrive\FakeGoogleDrive:C:\app:rw
+    - C:\Users\VY_Owner\onecoremsvsmon\15.0.28307.421:C:\remote_debugger:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:c:\.nuget\fallbackpackages:ro
+    - C:\Users\VY_Owner\.nuget\packages:c:\.nuget\packages:ro
+version: '3.4'

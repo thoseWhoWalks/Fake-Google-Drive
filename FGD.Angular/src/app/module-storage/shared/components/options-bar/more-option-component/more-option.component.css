@@ -1,0 +1,12 @@
+mat-menu-panel{
+    min-width:270px !important;
+}
+
+.edit-component{
+    display: flex;
+    align-items: center;
+}
+
+.edit-component > .material-icons{
+    margin-right: 15px;
+}

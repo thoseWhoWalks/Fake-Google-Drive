@@ -1,0 +1,242 @@
+
+.info{
+    padding: 100px 0px;
+    align-items: center;
+    height: 500px;
+}
+
+.info div{
+    width:35%;
+}
+
+.info img{
+    height: 300px;
+}
+
+.text h3{
+    color: black;
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.text p{
+    font-size: 24px;
+    font-weight: 300;
+    color: #818181;
+}
+
+.thumbnail{
+    height:500px;
+}
+
+.info-thumbnail{ 
+    background: url("https://www.google.com/drive/static/images/home/photo-1-1600.jpg");
+}
+
+.feature-1{
+    align-items: center; 
+    overflow:hidden;
+    margin: 50px 0px;
+    height: 400px;
+}
+
+.feature-1 div{
+    width:35%; 
+} 
+
+.feature-1-img img{
+    height: 400px;
+    margin-left: 10%;
+}
+
+.feature-1 p{
+    margin-right:10%;
+}
+
+.feature-1-thumbnail{
+    background: url("https://www.google.com/drive/static/images/home/photo-2-1600.jpg"); 
+}
+
+.about-people{
+    height:300px;
+    margin: 100px 0px;
+    align-items: center;
+}
+
+.about-people img{
+    height: 141px;
+    border-radius: 50%;
+    margin: 0px 15px 0px 15px; 
+}
+
+.about-people-text{
+    width:50%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.about-people-thumbnail{
+    background: url("https://www.google.com/drive/static/images/home/photo-3-1600.jpg"); 
+}
+
+.go-to-drive{
+    height: 300px; 
+    align-content: center;
+    margin: 150px auto;
+
+    width: 50%;
+}
+
+.goto-drive-title{
+    margin-top:16px;
+}
+
+.goto-drive-img img{
+    height:77px;
+    align-content: center;
+}
+
+
+.header-screen-gotodrive{  
+    margin-top: 25px;
+}
+
+.header-screen-gotodrive-btn{
+    width: 200px; 
+    height: 60px;
+    background-color: #4386FC;    
+    
+    align-items: center;
+
+}
+
+
+.header-screen-gotodrive-btn p{ 
+    color: white;  
+}
+
+.header-screen-gotodrive-btn a{ 
+    padding-top: 10px;
+    color: white;  
+}
+
+.header-screen-gotodrive-btn:hover{
+    background-color: #2263D6;
+}
+
+.header-screen-gotodrive-btn a:hover{
+    text-decoration: none;
+}
+
+.goto-drive-more{
+    margin-top: 26px;  
+}
+
+.goto-drive-more p{ 
+    float: left;
+    color:#669CFC;
+    font-size:18px;
+    font-weight:400;
+}
+
+.goto-drive-more a:hover, .goto-drive-more p:hover{
+    text-decoration-color: #669CFC;
+    text-decoration-line: underline;
+}
+
+.goto-drive-more  i{
+    margin-top: 2px;
+    display: inline-block; 
+    font-size: 25px;  
+    font-weight:500;
+    color: lightgray;
+} 
+
+.footer{
+    background-color: #F9F9F9;
+   
+}
+
+.footer li{
+    color: #628AD1;
+    font-size: 14px;
+    text-decoration-line: none;
+    list-style: none;
+}
+
+.footer-nav{
+    margin-top: 50px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.footer li:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.footer-nav li:nth-child(1){
+    color:#5A5A5A;
+    text-decoration-line: none;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer li:nth-child(1){
+    cursor: text;
+    text-decoration-line: none;
+}
+
+.footer-info{ 
+    align-items: center;
+    padding-top:20px;
+    height: 60px; 
+    padding-right: 70px;
+    padding-left: 70px; 
+    font-size: 16px;
+}
+
+.footer-info > div{
+    margin-right: 10%;
+}
+
+.footer-info img{
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 3px;
+} 
+
+.footer-culture{ 
+    align-items: center;
+    width:100%;
+    padding-left:40px;
+    padding-right: 40px; 
+    height: 50px;
+   background-color: rgb(240, 239, 239);
+}
+
+.footer-culture ul{
+    margin-bottom: 0px;
+}
+
+.footer-culture li{
+    float:left;
+    padding-right: 5px;
+    text-decoration-line: none;
+    list-style: none;
+    color:#A4C5FA;
+    font-size: 12px;
+}
+
+.footer-culture img{
+    height:25px;
+    padding-right: 35px;
+}
+
+mat-divider{
+    width: 95%;
+    margin: 0 auto;
+}
+

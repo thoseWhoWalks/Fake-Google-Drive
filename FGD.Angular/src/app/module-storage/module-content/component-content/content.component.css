@@ -1,0 +1,11 @@
+.drag-drop-active{
+    border : 3px solid lightskyblue;
+    background: lightblue url('https://image.flaticon.com/icons/svg/12/12313.svg') no-repeat;
+    background-size: 50px;
+    background-position: center;
+}
+
+mat-list{
+    width: 100%;
+    height: 83vh;
+}

@@ -1,0 +1,10 @@
+<mat-list-item class="item file-item" [disableRipple]="false" (click)="onFileClicked()"
+  [ngClass] = "{'selected-item' : isSelected}"  
+>
+
+<img  *ngIf="file.thumbnailPath !== null" [src]="file.thumbnailPath" alt="tumbnail"  > 
+
+    <h4 class="item-title" mat-line>{{file.title}}</h4> 
+
+    <p class="item-date" mat-line> {{file.dateCreated | date}} </p>
+  </mat-list-item>

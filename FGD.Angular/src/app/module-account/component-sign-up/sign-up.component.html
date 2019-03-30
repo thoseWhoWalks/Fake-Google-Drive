@@ -1,0 +1,123 @@
+<div class="container d-flex justify-content-center h-100">
+
+  <div class="row align-items-center h-100">
+
+    <div class="d-flex wrapper justify-content-between">
+
+      <div class="sign-up-main-container">
+
+        <app-header title="Sign Up" aligment="left"></app-header>
+
+        <form [formGroup]="signUpForm" (ngSubmit)="onSignUpClicked(signUpForm)">
+
+          <div class="server-errors">
+            <mat-error *ngIf="serverError !== null">
+              {{serverError}}
+            </mat-error>
+          </div>
+
+          <div class="name-input">
+            <div class="d-flex justify-content-between">
+
+              <mat-form-field class="half-width-input">
+                <input matInput placeholder="First Name" name="firstName" [formControl]="alphabeticFormControl">
+              </mat-form-field>
+              <mat-error *ngIf="alphabeticFormControl.hasError('')">
+                Value must contain only chars
+              </mat-error>
+
+              <mat-form-field class="half-width-input">
+                <input matInput placeholder="Last Name" name="lastName" [formControl]="alphabeticFormControl">
+              </mat-form-field>
+              <mat-error *ngIf="alphabeticFormControl.hasError('')">
+                Value must contain only chars
+              </mat-error>
+
+            </div>
+          </div>
+
+          <div class="email-input full-width-input">
+            <mat-form-field>
+              <input matInput placeholder="Email" [formControl]="emailFormControl">
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="emailFormControl?.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <p>You can use letters, numbers & periods</p>
+          </div>
+
+          <div class="age-input">
+
+            <mat-form-field>
+              <input matInput type="number" min="1" max="300" name="age" [formControl]="ageFormControl" placeholder="Age">
+              <mat-error *ngIf="ageFormControl?.hasError('required')">
+                Age is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+          </div>
+
+          <div class="d-flex justify-content-between password-input">
+
+            <div class="half-width-input">
+              <mat-form-field>
+                <input matInput placeholder="Enter your password" name="password" [formControl]="passwordFormControl"
+                  [type]="hide ? 'password' : 'text'">
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                  Password is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+
+            </div>
+
+            <div class="half-width-input">
+
+              <mat-form-field>
+                <input matInput placeholder="Repeat your password" name="confirmPassword"
+                  [formControl]="passwordFormControl" [type]="hide ? 'password' : 'text'">
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                  Password is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+
+            </div>
+
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+
+          </div>
+
+          <div>
+            <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
+          </div>
+
+
+
+          <div class="d-flex justify-content-between button-area">
+            <a routerLink="/signin">
+              Log in instead
+            </a>
+            <button mat-raised-button color="primary" class="accBtn">Sign Up</button>
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="d-none d-sm-none d-md-block sign-up-img-container">
+
+        <img src="https://www.gstatic.com/accounts/signup/glif/account.svg" alt="sign-up-img">
+
+        <p>One account. All of Google working for you.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+.item{ 
+    cursor: pointer;
+    width: 200px;
+    margin: 10px;    
+}
+
+.item-title{
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.item-date{
+    font-size: 10px !important;
+}
+
+.selected-item{ 
+    background-color: #E8F0FE;
+}
+
+.selected-item h4,.selected-item p{
+    color: #2972D5;
+}
+
+.folder{
+    border: 1px solid lightgrey;
+    border-radius: 5px; 
+    height: 50px !important;
+    width: 240px !important;
+}

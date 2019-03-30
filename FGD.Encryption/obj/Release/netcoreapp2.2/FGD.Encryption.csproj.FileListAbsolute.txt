@@ -1,0 +1,13 @@
+C:\fakegoogledrive\FGD.Encryption\bin\Release\netcoreapp2.2\FGD.Encryption.deps.json
+C:\fakegoogledrive\FGD.Encryption\bin\Release\netcoreapp2.2\FGD.Encryption.dll
+C:\fakegoogledrive\FGD.Encryption\bin\Release\netcoreapp2.2\FGD.Encryption.pdb
+C:\fakegoogledrive\FGD.Encryption\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.dll
+C:\fakegoogledrive\FGD.Encryption\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.pdb
+C:\fakegoogledrive\FGD.Encryption\bin\Release\netcoreapp2.2\Microsoft.IdentityModel.Tokens.xml
+C:\fakegoogledrive\FGD.Encryption\obj\Release\netcoreapp2.2\FGD.Encryption.csprojAssemblyReference.cache
+C:\fakegoogledrive\FGD.Encryption\obj\Release\netcoreapp2.2\FGD.Encryption.csproj.CoreCompileInputs.cache
+C:\fakegoogledrive\FGD.Encryption\obj\Release\netcoreapp2.2\FGD.Encryption.AssemblyInfoInputs.cache
+C:\fakegoogledrive\FGD.Encryption\obj\Release\netcoreapp2.2\FGD.Encryption.AssemblyInfo.cs
+C:\fakegoogledrive\FGD.Encryption\obj\Release\netcoreapp2.2\FGD.Encryption.csproj.CopyComplete
+C:\fakegoogledrive\FGD.Encryption\obj\Release\netcoreapp2.2\FGD.Encryption.dll
+C:\fakegoogledrive\FGD.Encryption\obj\Release\netcoreapp2.2\FGD.Encryption.pdb

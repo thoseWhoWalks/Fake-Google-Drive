@@ -1,0 +1,37 @@
+<mat-nav-list>
+    <mat-action-list>
+        
+        <div class="nav drive-nav">
+            <a mat-list-item [routerLink]=" ['./'] "
+            routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}" class="mat-body-strong mat-body-2"  matLine>
+                <button mat-list-item class="mat-body-strong mat-body-2" [matRippleRadius]="25" matRipple (click)="onLinkClicked()">
+                    <i class="material-icons">
+                        save
+                    </i> 
+                <p class="d-none d-lg-block">My Drive </p> </button>
+                </a>
+        </div>
+
+        <div class="nav shared-nav">
+            <a mat-list-item [routerLink]=" [{outlets: {'storage-outlet': ['shared']}}] "
+            routerLinkActive="active" class="mat-body-strong mat-body-2"  matLine>
+                    <button mat-list-item class="mat-body-strong mat-body-2" (click)="onLinkClicked()">
+                        <i class="material-icons">
+                                supervisor_account
+                        </i> 
+                    <p class="d-none d-lg-block"> Shared <p class="shared-with-me d-none d-xl-block"> with me</p> </button>
+                    </a>
+            </div>
+
+        <div class="nav bin-nav">
+                <a mat-list-item [routerLink]="[{outlets: {'storage-outlet': ['bin']}}]" routerLinkActive="active"  class="mat-body-strong mat-body-2"  matLine>
+                    <button mat-list-item class="mat-body-strong mat-body-2" (click)="onLinkClicked()">
+                            <i class="material-icons">
+                                    delete
+                            </i> 
+                       <p class="d-none d-lg-block"> Bin  </p> </button>
+                </a>
+            </div>
+          
+      </mat-action-list>
+  </mat-nav-list>

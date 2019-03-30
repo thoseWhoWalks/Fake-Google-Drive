@@ -1,0 +1,47 @@
+version: '3.4'
+
+services:
+  #fgd.notificationservice.api:
+    #environment:
+      #- ASPNETCORE_ENVIRONMENT=Development
+    #ports:
+      #- "5001:80"
+   #depends_on:
+      #- fgd.api
+    #networks:
+      #static-network:
+       # ipv4_address: 172.20.128.2
+
+  fgd.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5000:80"
+    #depends_on:
+      #- db
+    networks:
+      static-network:
+        ipv4_address: 172.20.129.2
+
+  #db: 
+    #environment:
+       # SA_PASSWORD: "MyPassword001"
+        #ACCEPT_EULA: "Y"
+    #ports:
+      #- "1433:1433"
+    #networks:
+        #static-network:
+          #ipv4_address: 172.20.130.2
+
+
+networks:
+  default:
+    external:
+      name: nat
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+          #docker-compose v3+ do not use ip_range
+          #ip_range: 172.28.5.0/24
+

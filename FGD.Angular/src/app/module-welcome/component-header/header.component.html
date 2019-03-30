@@ -1,0 +1,43 @@
+<div class="header-nav" [ngStyle]="{'height.px': innerHeight }">
+  <div class="d-flex bd-highlight   header-nav-brand">
+      <div class="mr-auto p-2 bd-highlight header-nav-logo">
+        Fake <span class="header-nav-brand-company"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span> Drive
+      </div>
+      <div class="p-2 d-none d-lg-block bd-highlight nav-menu">
+        <li>Meet Drive</li>
+        <li>Using Drive</li>
+        <li>Download</li>
+        <li>For Work</li>
+        <li>Help</li>
+      </div>
+      <div class="p-2 bd-highlight header-nav-gotodrive">
+        <a [routerLink]="[ '/storage' ]"> 
+          <p class = "header-nav-gotodrive-btn">Go to Google Drive</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="header-screen" [ngStyle]="{'height.px': innerHeight }">
+          <div class="header-screen-logo d-flex justify-content-center">
+            <img src="https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/google_drive.png" alt="logo">
+          </div>
+          <div class="d-flex justify-content-center header-nav-title">
+            <p>A safe place for all your files</p>
+          </div>
+          <div class="d-flex justify-content-center  header-screen-gotodrive"  >
+            <div class="d-flex justify-content-center  header-screen-gotodrive-btn" >
+               <a [routerLink]="[ '/storage' ]"> 
+                  <p>Go to Google Drive </p>
+              </a> 
+            </div>
+          </div>
+
+          <div class = "d-flex justify-content-center">
+              <a href="#start">
+                  <i class="material-icons arrow" [@moveArrow]="state" (@moveArrow.done)="onAnimationEnd($event)">
+                      keyboard_arrow_down
+                      </i>
+              </a>
+          </div>
+    </div>   
+</div>

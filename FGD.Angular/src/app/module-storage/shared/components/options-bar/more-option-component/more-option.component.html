@@ -1,0 +1,16 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+        <i class="material-icons">
+            more_vert
+          </i> 
+        </button>
+
+        <mat-menu #menu="matMenu">
+                <ng-container *ngIf="((this.selectedFiles.length == 1 && this.selectedFolders.length == 0) || (this.selectedFolders.length == 1 && this.selectedFiles.length == 0));" mat-icon-button (click)="onRenameClicked()">
+                         <button mat-menu-item class="edit-component" (click)="onRenameClicked()">
+                                <i class="material-icons">
+                                        edit
+                                </i>
+                                Rename
+                                </button>
+                </ng-container>
+            </mat-menu>

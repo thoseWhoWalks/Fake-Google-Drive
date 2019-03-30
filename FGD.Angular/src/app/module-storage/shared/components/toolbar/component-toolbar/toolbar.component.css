@@ -1,0 +1,144 @@
+*{
+    font-size: 27px;
+    color:#5F6368;
+}
+
+.logo{
+    width:20%;
+    margin-top: 7px;
+}
+
+.logo p{ 
+    margin-top: 2px;
+    font-size: 22px;
+}
+
+.main-container{
+    margin-top:5px;
+}
+
+.logo img{
+    height : 40px;  
+    margin-left: 10%;
+    margin-right: 5%;
+}
+ 
+
+.search-field input{
+    border: 0px;
+    border-radius: 5px;
+    background-color: whitesmoke; 
+    height: 50px; 
+    top: 3px;
+}
+ 
+
+.input-group{
+    position: relative; 
+}
+
+input{
+    font-size: 17px;
+    font-weight: 400;
+    padding-left: 50px;
+    border: 0px;
+    bottom: 5px;
+}
+
+.search-icon{
+    border: 0px;
+    background-color: whitesmoke;  
+    position: absolute;   
+    top:3px;
+}
+
+i::before{ 
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.search-icon i{
+    z-index: 100;  
+
+}
+
+.tools{ 
+     align-items: center;
+}
+
+.tools i{
+    cursor: pointer !important;
+}
+
+.tools-account-service-logout{
+    margin-left:5px;
+}
+
+.tools-service{
+    margin-left: 145px;
+}
+
+.tools-notifications{
+    margin-left: 50px;
+}
+
+.tools-account-service{
+    margin-left: 20px;
+}
+
+.search-field {
+    width: 55%;
+}
+
+ .notification{ 
+    font-size: 14px; 
+    border: 1px solid rgb(165, 170, 175);
+ }
+
+
+
+ @media screen and (max-width: 1331px) {
+     
+      .tools-service{
+        margin-left: 90px;
+    }
+
+    .tools-notifications { 
+      margin-left: 35px;
+    } 
+
+    .tools-account-service{
+        margin-left: 10px;
+    }
+  }
+ 
+  @media screen and (max-width: 1000px) {
+     
+    .tools-service{
+      margin-left: 30px;
+  }
+
+  .tools-notifications { 
+    margin-left: 15px;
+  } 
+
+  .tools-account-service{
+      margin-left: 10px;
+  }
+}
+ 
+@media screen and (max-width: 600px) {
+
+    .logo{
+        margin-left: 25%;
+    }
+
+    .tools-notifications { 
+      margin-left: 35px;
+    } 
+
+    .tools-account-service{
+        margin-left: 10px;
+    }
+  }

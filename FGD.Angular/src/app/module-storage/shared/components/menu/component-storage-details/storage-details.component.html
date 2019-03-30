@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-start info-container">
+
+    <div class="icon">
+            <i class="material-icons">
+                    cloud_queue
+                    </i>
+    </div>
+
+    <div class="info d-none d-md-block">
+
+        <p class="mat-h3 mat-subheading-2 info-title">Storage</p> 
+
+        <ng-container *ngIf="this.subscriptionState.subscription.takenSpace===undefined; else dataLoadedTemplate">
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </ng-container>
+
+        <ng-template #dataLoadedTemplate>
+            <mat-progress-bar mode="determinate" [value]="this?.takenPlace"></mat-progress-bar>
+            <p class="info-text">
+                {{this.subscriptionState?.subscription.takenSpace/1024/1024|number}}
+                GB of {{this.subscriptionState?.subscription.totalSpace}} GB used
+            </p> 
+        </ng-template>
+         
+    </div>
+
+</div>

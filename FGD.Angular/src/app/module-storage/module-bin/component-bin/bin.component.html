@@ -1,0 +1,30 @@
+<div class="d-flex">
+  <mat-list>
+
+    <ng-container *ngIf="((foldersState|async).isInited)===false; else dataLoadedTemplate">
+      <div class="d-flex justify-content-center h-100">
+        <mat-spinner class="align-self-center"></mat-spinner>
+      </div>
+    </ng-container>
+
+    <ng-template #dataLoadedTemplate>
+
+      <h3 mat-subheader>Files</h3>
+      <div class="d-flex flex-wrap">
+        <app-stored-file *ngFor="let file of ((filesState|async).files|filterNotDeleted)" [file]="file">
+        </app-stored-file>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <h3 mat-subheader>Folders</h3>
+      <div class="d-flex flex-wrap">
+        <app-stored-folder class="folder" *ngFor="let folder of ((foldersState|async).folders|filterNotDeleted)"
+          [folder]="folder">
+        </app-stored-folder>
+      </div>
+
+      </ng-template>
+
+  </mat-list>
+</div>

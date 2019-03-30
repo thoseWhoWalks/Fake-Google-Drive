@@ -1,0 +1,6 @@
+<mat-list-item class="item folder" [disableRipple]="false" (dblclick)="onFolderDoubleClicked()" (click)="onFolderClicked()"
+[ngClass] = "{'selected-item' : isSelected}">
+    <mat-icon mat-list-icon>folder</mat-icon>
+    <h4 class="item-title" mat-line>{{folder.title}}</h4>
+    <p class="item-date" mat-line> {{folder.dateCreated | date}} </p>
+  </mat-list-item>

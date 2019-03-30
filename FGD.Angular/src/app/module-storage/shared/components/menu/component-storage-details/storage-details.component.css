@@ -1,0 +1,45 @@
+*{
+    color: #5F6368;
+    font-size: 12px;
+}
+
+div{
+    margin: 5px;
+}
+
+.info-container{
+    margin-top: 10px;
+}
+
+.info{
+    width: 80%;
+    margin-left: 20px;
+}
+
+.info-text{
+    margin-top: 5px;
+}
+
+mat-progress-bar{
+    width: 95%;
+    display: flex; 
+}
+
+.icon{
+    width: 20%;
+}
+
+.icon i{
+    font-size: 25px;
+    margin-left: 25px;
+}
+
+.info-title{
+    font-size: 12px;
+    font-weight: bolder;
+    margin: 3px;
+}
+
+.info-title{
+    color: black;
+}

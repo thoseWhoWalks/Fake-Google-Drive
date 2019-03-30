@@ -1,0 +1,8 @@
+<mat-nav-list>
+    <span mat-line>Title: {{this.currentItem.title}}</span>
+    <span mat-line><br/>Date created: {{this.currentItem.dateCreated|date}}</span>
+    <span *ngIf="this.currentItem.sizeInKbs !== null" mat-line><br/>
+        Size: {{this.currentItem.sizeInKbs}} kb</span>
+    <span *ngIf="this.currentItem.extention !== null" mat-line><br/>
+        Extention: {{this.currentItem.extention}}</span>
+</mat-nav-list>

@@ -1,0 +1,12 @@
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\bin\Debug\netcoreapp2.2\FGD.NotificationService.Api.Model.deps.json
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\bin\Debug\netcoreapp2.2\FGD.NotificationService.Api.Model.dll
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\bin\Debug\netcoreapp2.2\FGD.NotificationService.Api.Model.pdb
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\bin\Debug\netcoreapp2.2\FGD.SharedTypes.dll
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\bin\Debug\netcoreapp2.2\FGD.SharedTypes.pdb
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\obj\Debug\netcoreapp2.2\FGD.NotificationService.Api.Model.csprojAssemblyReference.cache
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\obj\Debug\netcoreapp2.2\FGD.NotificationService.Api.Model.csproj.CoreCompileInputs.cache
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\obj\Debug\netcoreapp2.2\FGD.NotificationService.Api.Model.AssemblyInfoInputs.cache
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\obj\Debug\netcoreapp2.2\FGD.NotificationService.Api.Model.AssemblyInfo.cs
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\obj\Debug\netcoreapp2.2\FGD.NotificationService.Api.Model.csproj.CopyComplete
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\obj\Debug\netcoreapp2.2\FGD.NotificationService.Api.Model.dll
+C:\Users\VY_Owner\source\repos\FGD.NotificationService.Api.Model\obj\Debug\netcoreapp2.2\FGD.NotificationService.Api.Model.pdb

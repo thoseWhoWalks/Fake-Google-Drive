@@ -1,0 +1,62 @@
+<div class="d-flex options-container justify-content-between">
+
+  <button mat-button class="p2 title" (click)="onRollBackToRootClicked()">{{title}}</button>
+
+  <button mat-button class="title" *ngFor="let link of navigatorState.stack.instance" (click)="onRollBackClicked(link)">
+    <i class="material-icons">
+      chevron_right
+    </i>
+    {{link.title}}
+  </button>
+
+  <div class="options-menu p-2 flex-grow-1">
+
+    <ng-container *ngIf=" this.selectedFiles.length>0 || this.selectedFolders.length>0 ;">
+
+      <button *ngIf="(this.location == panels.Storage || this.location == panels.Shared) && this.selectedFiles.length>0;"
+        mat-icon-button (click)="onDownloadClicked()">
+        <i class="material-icons">
+          arrow_downward
+        </i>
+      </button>
+
+      <button *ngIf=" this.location == panels.Storage ;" mat-icon-button (click)="onDeleteClicked()">
+        <i class="material-icons">
+          delete
+        </i>
+      </button>
+
+      <share-menu-item *ngIf=" this.location == panels.Storage ;">
+      </share-menu-item>
+       
+      <info-menu-item *ngIf="((this.selectedFiles.length == 1 && this.selectedFolders.length == 0) || (this.selectedFolders.length == 1 && this.selectedFiles.length == 0));">
+      </info-menu-item>
+
+      <more-option *ngIf=" this.location == panels.Storage ;">
+      </more-option>
+
+      <button *ngIf=" this.location == panels.Bin ;" mat-icon-button (click)="onRestoreClicked()">
+        <i class="material-icons">
+          restore
+        </i>
+      </button>
+
+      <button *ngIf=" this.location == panels.Bin ;" mat-icon-button (click)="onDeleteForeverClicked()">
+        <i class="material-icons">
+          delete_sweep
+        </i>
+      </button>
+
+    </ng-container>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+
+  </div>
+
+  <mat-menu #menu="matMenu">
+    <create-new-folder-menu-item></create-new-folder-menu-item>
+  </mat-menu>
+
+</div>

@@ -1,0 +1,12 @@
+C:\fakegoogledrive\FGD.Bussines.Model\bin\Release\netcoreapp2.2\FGD.Bussines.Model.deps.json
+C:\fakegoogledrive\FGD.Bussines.Model\bin\Release\netcoreapp2.2\FGD.Bussines.Model.dll
+C:\fakegoogledrive\FGD.Bussines.Model\bin\Release\netcoreapp2.2\FGD.Bussines.Model.pdb
+C:\fakegoogledrive\FGD.Bussines.Model\bin\Release\netcoreapp2.2\FGD.SharedTypes.dll
+C:\fakegoogledrive\FGD.Bussines.Model\bin\Release\netcoreapp2.2\FGD.SharedTypes.pdb
+C:\fakegoogledrive\FGD.Bussines.Model\obj\Release\netcoreapp2.2\FGD.Bussines.Model.csprojAssemblyReference.cache
+C:\fakegoogledrive\FGD.Bussines.Model\obj\Release\netcoreapp2.2\FGD.Bussines.Model.csproj.CoreCompileInputs.cache
+C:\fakegoogledrive\FGD.Bussines.Model\obj\Release\netcoreapp2.2\FGD.Bussines.Model.AssemblyInfoInputs.cache
+C:\fakegoogledrive\FGD.Bussines.Model\obj\Release\netcoreapp2.2\FGD.Bussines.Model.AssemblyInfo.cs
+C:\fakegoogledrive\FGD.Bussines.Model\obj\Release\netcoreapp2.2\FGD.Bussines.Model.csproj.CopyComplete
+C:\fakegoogledrive\FGD.Bussines.Model\obj\Release\netcoreapp2.2\FGD.Bussines.Model.dll
+C:\fakegoogledrive\FGD.Bussines.Model\obj\Release\netcoreapp2.2\FGD.Bussines.Model.pdb

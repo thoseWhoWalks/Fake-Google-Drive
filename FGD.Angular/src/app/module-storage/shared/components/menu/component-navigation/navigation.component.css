@@ -1,0 +1,54 @@
+*{
+    color: #5F6368;
+}
+
+p{
+    padding-top: 15px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.bin-nav:hover, .drive-nav:hover, .shared-nav:hover{ 
+    background: #F5F5F5 !important;
+    border-radius: 0px 25px 25px 0px; 
+ }
+
+ mat-list-item:hover, button:hover, a:hover{
+    background: transparent !important;
+    border-radius: 0px 25px 25px 0px; 
+ }
+ 
+ button:focus{
+    background: transparent !important;
+    border-radius: 0px 25px 25px 0px; 
+ }
+
+.shared-with-me{
+    margin-left: 3px;
+ }
+ .material-icons{
+     padding-right: 25px;
+ }
+
+.active{
+    background: #E8F0FE !important;
+    border-radius: 0px 25px 25px 0px; 
+}
+
+.active:hover{
+    background: #E8F0FE !important;
+}
+
+.active p, .active i{
+
+    color: #4285F4 !important;
+}
+
+a{
+    height: 42px !important;
+}
+
+mat-nav-list{
+    width: 90% !important;
+}
+ 

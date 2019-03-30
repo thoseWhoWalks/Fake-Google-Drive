@@ -1,0 +1,17 @@
+version: '3.4'
+
+services: 
+  #fgd.notificationservice.api:
+    #image: ${DOCKER_REGISTRY-}fgdnotificationserviceapi
+    #build:
+      #context: .
+      #dockerfile: FGD.NotificationService.API\Dockerfile
+
+  fgd.api:
+    image: ${DOCKER_REGISTRY-}fgdapi
+    build:
+      context: .
+      dockerfile: FakeGoogleDrive\Dockerfile 
+
+  #db:
+    #image: "microsoft/mssql-server-windows-express"

@@ -1,0 +1,127 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.Api", "FakeGoogleDrive\FGD.Api.csproj", "{D0B0D985-4DB8-4CB5-8D77-59BD56DD7DE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.Data", "FGD.Data\FGD.Data.csproj", "{7202CCEB-BDB6-4131-816D-3D9EF238073C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.Data.Service", "FGD.Data.Service\FGD.Data.Service.csproj", "{30CC3BE5-EDD3-4F07-8B64-AD51A89759D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.Api.Model", "FGD.Api.Model\FGD.Api.Model.csproj", "{9E3D0FA4-0BF8-4CD4-8F30-1D140AD35157}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.Bussines.Model", "FGD.Bussines.Model\FGD.Bussines.Model.csproj", "{DF133F69-2299-4372-9E20-1EBAE5110713}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.Bussines.Service", "FGD.Bussines.Service\FGD.Bussines.Service.csproj", "{BFCF3F7E-4E9E-48F6-A479-452AD5B85E31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{EF222632-A79E-42F8-A4C1-3A51B164C188}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.Encryption", "FGD.Encryption\FGD.Encryption.csproj", "{CD376E59-07EA-4547-967D-1C77DC66A28D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.Configuration", "FGD.Configuration\FGD.Configuration.csproj", "{FD993B8F-6A61-4B82-8679-35CC307F8B7D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.SharedTypes", "FGD.SharedTypes\FGD.SharedTypes.csproj", "{031B1F6E-3D24-4C09-95DB-F74C1B38D169}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NotificationService", "NotificationService", "{A31401D7-8603-42C4-95F5-B1E9CB07E9F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.NotificationService.Api", "FGD.NotificationService.API\FGD.NotificationService.Api.csproj", "{A71E2E25-FA86-411C-96CA-D38375CF21CB}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FAC826F2-BBFF-46DD-AC78-F00783A49305}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FGD.Angular", "FGD.Angular\", "{1150073E-554B-42DA-9B9C-9AB60BF5D76C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50491"
+		Debug.AspNetCompiler.PhysicalPath = "FGD.Angular\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50491\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50491"
+		Release.AspNetCompiler.PhysicalPath = "FGD.Angular\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50491\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50491"
+		SlnRelativePath = "FGD.Angular\"
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.NotificationService.Api.Model", "FGD.NotificationService.Api.Model\FGD.NotificationService.Api.Model.csproj", "{CE7600A1-B673-4D20-B10A-27AB94C7C694}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0B0D985-4DB8-4CB5-8D77-59BD56DD7DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B0D985-4DB8-4CB5-8D77-59BD56DD7DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B0D985-4DB8-4CB5-8D77-59BD56DD7DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0B0D985-4DB8-4CB5-8D77-59BD56DD7DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7202CCEB-BDB6-4131-816D-3D9EF238073C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7202CCEB-BDB6-4131-816D-3D9EF238073C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7202CCEB-BDB6-4131-816D-3D9EF238073C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7202CCEB-BDB6-4131-816D-3D9EF238073C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30CC3BE5-EDD3-4F07-8B64-AD51A89759D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30CC3BE5-EDD3-4F07-8B64-AD51A89759D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30CC3BE5-EDD3-4F07-8B64-AD51A89759D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30CC3BE5-EDD3-4F07-8B64-AD51A89759D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E3D0FA4-0BF8-4CD4-8F30-1D140AD35157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E3D0FA4-0BF8-4CD4-8F30-1D140AD35157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E3D0FA4-0BF8-4CD4-8F30-1D140AD35157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E3D0FA4-0BF8-4CD4-8F30-1D140AD35157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF133F69-2299-4372-9E20-1EBAE5110713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF133F69-2299-4372-9E20-1EBAE5110713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF133F69-2299-4372-9E20-1EBAE5110713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF133F69-2299-4372-9E20-1EBAE5110713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFCF3F7E-4E9E-48F6-A479-452AD5B85E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCF3F7E-4E9E-48F6-A479-452AD5B85E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCF3F7E-4E9E-48F6-A479-452AD5B85E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCF3F7E-4E9E-48F6-A479-452AD5B85E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD376E59-07EA-4547-967D-1C77DC66A28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD376E59-07EA-4547-967D-1C77DC66A28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD376E59-07EA-4547-967D-1C77DC66A28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD376E59-07EA-4547-967D-1C77DC66A28D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD993B8F-6A61-4B82-8679-35CC307F8B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD993B8F-6A61-4B82-8679-35CC307F8B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD993B8F-6A61-4B82-8679-35CC307F8B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD993B8F-6A61-4B82-8679-35CC307F8B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{031B1F6E-3D24-4C09-95DB-F74C1B38D169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{031B1F6E-3D24-4C09-95DB-F74C1B38D169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{031B1F6E-3D24-4C09-95DB-F74C1B38D169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{031B1F6E-3D24-4C09-95DB-F74C1B38D169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A71E2E25-FA86-411C-96CA-D38375CF21CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A71E2E25-FA86-411C-96CA-D38375CF21CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A71E2E25-FA86-411C-96CA-D38375CF21CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A71E2E25-FA86-411C-96CA-D38375CF21CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC826F2-BBFF-46DD-AC78-F00783A49305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC826F2-BBFF-46DD-AC78-F00783A49305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC826F2-BBFF-46DD-AC78-F00783A49305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC826F2-BBFF-46DD-AC78-F00783A49305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{CE7600A1-B673-4D20-B10A-27AB94C7C694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE7600A1-B673-4D20-B10A-27AB94C7C694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE7600A1-B673-4D20-B10A-27AB94C7C694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE7600A1-B673-4D20-B10A-27AB94C7C694}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD376E59-07EA-4547-967D-1C77DC66A28D} = {EF222632-A79E-42F8-A4C1-3A51B164C188}
+		{FD993B8F-6A61-4B82-8679-35CC307F8B7D} = {EF222632-A79E-42F8-A4C1-3A51B164C188}
+		{031B1F6E-3D24-4C09-95DB-F74C1B38D169} = {EF222632-A79E-42F8-A4C1-3A51B164C188}
+		{A71E2E25-FA86-411C-96CA-D38375CF21CB} = {A31401D7-8603-42C4-95F5-B1E9CB07E9F2}
+		{CE7600A1-B673-4D20-B10A-27AB94C7C694} = {A31401D7-8603-42C4-95F5-B1E9CB07E9F2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A33CE6B-3D72-4AF8-8607-B6208D48AC2E}
+	EndGlobalSection
+EndGlobal

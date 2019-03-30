@@ -1,0 +1,8 @@
+button{
+    display: flex;
+    align-items: center;
+}
+
+.material-icons{
+    margin-right: 15px;
+}

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FGD.Api.Model\FGD.Api.Model.csproj" />
+    <ProjectReference Include="..\FGD.Bussines.Model\FGD.Bussines.Model.csproj" />
+    <ProjectReference Include="..\FGD.Data\FGD.Data.csproj" />
+  </ItemGroup>
+
+</Project>

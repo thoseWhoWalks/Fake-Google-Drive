@@ -1,0 +1,65 @@
+<div class="container d-flex justify-content-center sign-in-container h-100">
+  
+  <div class="row align-items-center h-100">
+  
+  <div class="wrapper mx-auto">
+
+      <app-header title="Sign In"></app-header> 
+
+      <form [formGroup]="myForm" (ngSubmit)="onSignInClicked(myForm)">  
+
+          <div class="full-width-input">
+
+            <mat-form-field>
+              <input matInput placeholder="Email"  [formControl]="emailFormControl">
+              
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            
+            </mat-form-field>
+
+          </div>
+
+          <div class="full-width-input">
+
+            <mat-form-field>
+                <input matInput placeholder="Enter your password"  [formControl]="passwordFormControl"   [type]="hide ? 'password' : 'text'">
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                  Password is <strong>required</strong>
+                </mat-error>
+              
+              </mat-form-field>
+
+          </div>
+
+          <mat-error *ngIf="serverError !== '' ">
+            {{serverError}}
+          </mat-error>
+
+              <div class="sign-in-form-incognito d-flex justify-content-center">
+                
+                <p>Not your computer? Use Guest mode to sign in privately.
+                  <a href="https://support.google.com/chrome/answer/6130773?hl=uk"> Learn more </a>
+                </p>
+              
+              </div>
+
+            <div class=" d-flex justify-content-between button-area">
+              <a [routerLink]="[ '/signup' ]">
+                Create account
+              </a>
+              
+                <button mat-raised-button color="primary" class="btn accBtn" type="submit">Sign In</button>
+            </div>
+              
+          </form>
+        </div>
+
+      </div>
+  </div>

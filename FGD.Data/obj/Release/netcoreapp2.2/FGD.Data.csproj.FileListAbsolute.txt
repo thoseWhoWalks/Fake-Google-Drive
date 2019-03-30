@@ -1,0 +1,14 @@
+C:\fakegoogledrive\FGD.Data\bin\Release\netcoreapp2.2\FGD.Data.deps.json
+C:\fakegoogledrive\FGD.Data\bin\Release\netcoreapp2.2\FGD.Data.runtimeconfig.json
+C:\fakegoogledrive\FGD.Data\bin\Release\netcoreapp2.2\FGD.Data.runtimeconfig.dev.json
+C:\fakegoogledrive\FGD.Data\bin\Release\netcoreapp2.2\FGD.Data.dll
+C:\fakegoogledrive\FGD.Data\bin\Release\netcoreapp2.2\FGD.Data.pdb
+C:\fakegoogledrive\FGD.Data\bin\Release\netcoreapp2.2\FGD.SharedTypes.dll
+C:\fakegoogledrive\FGD.Data\bin\Release\netcoreapp2.2\FGD.SharedTypes.pdb
+C:\fakegoogledrive\FGD.Data\obj\Release\netcoreapp2.2\FGD.Data.csprojAssemblyReference.cache
+C:\fakegoogledrive\FGD.Data\obj\Release\netcoreapp2.2\FGD.Data.csproj.CoreCompileInputs.cache
+C:\fakegoogledrive\FGD.Data\obj\Release\netcoreapp2.2\FGD.Data.AssemblyInfoInputs.cache
+C:\fakegoogledrive\FGD.Data\obj\Release\netcoreapp2.2\FGD.Data.AssemblyInfo.cs
+C:\fakegoogledrive\FGD.Data\obj\Release\netcoreapp2.2\FGD.Data.csproj.CopyComplete
+C:\fakegoogledrive\FGD.Data\obj\Release\netcoreapp2.2\FGD.Data.dll
+C:\fakegoogledrive\FGD.Data\obj\Release\netcoreapp2.2\FGD.Data.pdb

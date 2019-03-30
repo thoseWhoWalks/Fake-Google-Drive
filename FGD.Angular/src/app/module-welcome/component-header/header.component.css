@@ -1,0 +1,151 @@
+.header-nav{ 
+    margin-bottom:  0px;
+    font-size: 17px; 
+    color: white; 
+}
+
+@media screen and (max-width: 600px) {
+    .header-nav-logo{
+      color: red;
+    }
+  }
+
+.header-nav-logo{
+    margin: 5px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #818181;
+}
+
+ .nav-menu{
+    font-weight: 400;
+    align-items: center;
+ }
+
+.header-nav-logo span:nth-child(1){
+    color:rgb(85, 85, 228);
+}
+.header-nav-logo span:nth-child(2){
+    color:rgb(238, 22, 22);
+}
+.header-nav-logo span:nth-child(3){
+    color:rgb(255, 230, 0);
+}
+.header-nav-logo span:nth-child(4){
+    color:rgb(80, 80, 233);
+}
+.header-nav-logo span:nth-child(5){
+    color:rgb(18, 218, 18);
+}
+.header-nav-logo span:nth-child(6){
+    color:rgb(238, 22, 22);
+}
+ 
+.header-nav-brand-company{
+    font-weight: bold;
+}
+
+.header-nav-brand{
+    position: fixed;
+    top: 0;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    border-bottom: 0.5px whitesmoke solid
+}
+
+li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+    color: #818181;
+}
+
+li:hover{
+   text-decoration-line: underline;
+   cursor: pointer;
+}
+
+.header-nav-gotodrive{
+    background-color: #4386FC;
+    height: 100%;
+}
+
+.header-nav-gotodrive-btn{
+    padding-top: 3px;
+}
+
+.header-nav-gotodrive:hover{
+    background-color: #2263D6;
+}
+
+.header-nav-gotodrive-btn{
+    margin: 10px;
+    
+    color: whitesmoke;
+}
+
+.header-screen{
+    background:  url("https://www.google.com/drive/static/images/home/intro-1600.jpg");
+    background-size: cover;
+    background-attachment: fixed; 
+    color: whitesmoke;
+}
+
+.header-screen-logo{
+   padding-top: 170px; 
+}
+
+.header-screen-logo img{
+    height: 100px;
+}
+
+.header-nav-title{
+    color: white;
+    font-size: 63px;
+    font-stretch: condensed;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.header-nav-title p{
+    color: white;
+}
+ 
+
+.header-screen-gotodrive{  
+    margin-top: 25px;
+}
+
+.header-screen-gotodrive-btn{
+    width: 200px; 
+    height: 60px;
+    background-color: #4386FC;    
+    
+    align-items: center;
+
+}
+
+.header-screen-gotodrive-btn p{ 
+    color: white;  
+}
+
+.header-screen-gotodrive-btn a{ 
+    padding-top: 10px;
+    color: white;  
+}
+
+.arrow{
+    margin-top: 75px;
+    font-size: 50px; 
+    color:whitesmoke;
+}
+
+.header-screen-gotodrive-btn:hover{
+    background-color: #2263D6;
+}
+ 
+.header-nav-gotodrive a:hover, .header-screen-gotodrive-btn a:hover{
+    text-decoration: none;
+}

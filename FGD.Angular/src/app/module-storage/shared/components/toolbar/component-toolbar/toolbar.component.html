@@ -1,0 +1,84 @@
+<div class="d-flex justify-content-left main-container">
+
+  <div class="d-flex justify-content-left logo">
+    <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/google-drive-512.png" alt="logo" />
+    <p>Drive</p>
+  </div>
+
+  <div class="d-none d-md-block search-field align-items-center">
+
+    <form>
+
+      <div class="input-group">
+
+        <span class="input-group-append">
+          <div class="input-group-text bg-transparent search-icon"><i class="fa fa-search"></i></div>
+        </span>
+        <input type="text" class="form-control search-input" placeholder="Search Drive">
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="tools d-flex justify-content-around">
+
+    <div class="tools-service">
+      <i class="material-icons">
+        settings
+      </i>
+
+    </div>
+
+    <div class="d-flex justify-content-center">
+
+      <div class="tools-notifications">
+
+        <ng-container *ngIf="newNotificationsCount>0; else elseTemplate">
+          <i matBadge="{{newNotificationsCount}}" matBadgeColor="warn" class="material-icons"
+            [matMenuTriggerFor]="menu">
+            notifications
+          </i>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <i class="material-icons" [matMenuTriggerFor]="menu">
+            notifications_none
+          </i>
+        </ng-template>
+
+        <mat-menu (closed)="onNotificationsMenuClosed()" #menu="matMenu">
+
+          <ng-container *ngIf="newNotificationsCount>0; else NoNewTemplate">
+            <mat-card class="notification"
+              *ngFor="let notification of (notifictionsState|async).notifications">
+              {{notification.title}}
+            </mat-card>
+          </ng-container>
+          <ng-template #NoNewTemplate>
+            <mat-card class="notification"
+              *ngFor="let notification of (notifictionsState|async).notifications">
+              {{notification.title}}
+            </mat-card>
+            There is no new notifications
+          </ng-template>
+        </mat-menu>
+
+      </div>
+
+      <div class="tools-account-service">
+
+        <i class="material-icons">
+          person
+        </i>
+
+        <i class="material-icons tools-account-service-logout" (click)="onExitClicked()">
+          exit_to_app
+        </i>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

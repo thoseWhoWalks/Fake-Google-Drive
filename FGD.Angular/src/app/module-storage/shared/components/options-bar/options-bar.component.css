@@ -1,0 +1,24 @@
+ .options-menu{
+     margin-right: 0px;
+ }
+
+ .title{
+    color: #45494C;
+    font-size: 18px;
+    font-weight: 500;
+ }
+
+ button{
+     padding-bottom:0px;
+ }
+
+mat-menu{
+    width:300px !important;
+}
+ 
+@media screen and (max-width: 600px) {
+    .options-menu{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+  }

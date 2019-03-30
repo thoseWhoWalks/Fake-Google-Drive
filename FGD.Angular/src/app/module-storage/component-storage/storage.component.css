@@ -1,0 +1,12 @@
+app-menu{
+    width: 20%;
+}
+
+.content{
+    width: 80%; 
+}
+
+mat-divider{
+    margin-top: -5px;
+}
+

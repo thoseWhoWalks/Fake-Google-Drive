@@ -1,0 +1,29 @@
+.item{ 
+    cursor: pointer;
+    width: 250px;
+    height: 150px !important;
+    margin: 9px;   
+    border: gainsboro solid 1px;
+    border-radius: 5px;
+}
+
+.selected-item{ 
+    background-color: #E8F0FE;
+}
+
+.selected-item h4,.selected-item p{
+    color: #2972D5;
+}
+
+.item-title{
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.item-date{
+    font-size: 10px !important;
+}
+
+img{
+    height: 100px;
+}

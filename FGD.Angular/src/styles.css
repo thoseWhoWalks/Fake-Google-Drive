@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+*{
+    color: #5F6368;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.mat-menu-content{
+  width:250px;
+}
+
+button:focus { outline: none !important; }
+
+.accBtn > *{
+  color: whitesmoke !important;
+}
+
+body, html {
+    height: 100%;
+  } 

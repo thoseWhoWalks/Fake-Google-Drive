@@ -1,0 +1,23 @@
+networks:
+  default:
+    external:
+      name: nat
+  static-network:
+    ipam:
+      config:
+      - subnet: 172.20.0.0/16
+services:
+  fgd.api:
+    build:
+      context: C:\fakegoogledrive
+      dockerfile: FakeGoogleDrive\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: fgdapi
+    networks:
+      static-network:
+        ipv4_address: 172.20.129.2
+    ports:
+    - published: 5000
+      target: 80
+version: '3.4'
