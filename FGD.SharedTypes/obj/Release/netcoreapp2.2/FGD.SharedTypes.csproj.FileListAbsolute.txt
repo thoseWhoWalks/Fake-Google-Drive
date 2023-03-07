@@ -1,9 +1,0 @@
-C:\fakegoogledrive\FGD.SharedTypes\bin\Release\netcoreapp2.2\FGD.SharedTypes.deps.json
-C:\fakegoogledrive\FGD.SharedTypes\bin\Release\netcoreapp2.2\FGD.SharedTypes.dll
-C:\fakegoogledrive\FGD.SharedTypes\bin\Release\netcoreapp2.2\FGD.SharedTypes.pdb
-C:\fakegoogledrive\FGD.SharedTypes\obj\Release\netcoreapp2.2\FGD.SharedTypes.csprojAssemblyReference.cache
-C:\fakegoogledrive\FGD.SharedTypes\obj\Release\netcoreapp2.2\FGD.SharedTypes.csproj.CoreCompileInputs.cache
-C:\fakegoogledrive\FGD.SharedTypes\obj\Release\netcoreapp2.2\FGD.SharedTypes.AssemblyInfoInputs.cache
-C:\fakegoogledrive\FGD.SharedTypes\obj\Release\netcoreapp2.2\FGD.SharedTypes.AssemblyInfo.cs
-C:\fakegoogledrive\FGD.SharedTypes\obj\Release\netcoreapp2.2\FGD.SharedTypes.dll
-C:\fakegoogledrive\FGD.SharedTypes\obj\Release\netcoreapp2.2\FGD.SharedTypes.pdb
