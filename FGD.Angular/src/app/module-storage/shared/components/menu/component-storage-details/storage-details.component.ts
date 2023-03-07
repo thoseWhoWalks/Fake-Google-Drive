@@ -22,8 +22,8 @@ export class StorageDetailsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
  
-    this.subscription = this.subscriptionStore.select("subscriptionPage").subscribe(res => {
-        this.subscriptionState = res; 
+    this.subscription = this.subscriptionStore.select("subscription").subscribe(res => {
+        this.subscriptionState.subscription = res; 
         
         if(res!=null)
           this.takenPlace = this.calculateTakenSpacePercentage(); 

@@ -1,5 +1,5 @@
 import { Component  } from '@angular/core';
-import {  MatDialog } from '@angular/material';
+import {  MatDialog } from '@angular/material/dialog';
 import { FolderModel } from '../../../models/folder.model';
 import { FolderService } from '../../../api/folder.service';
 import { CreateFolderDialog } from './create-folder-dialog/create-folder-dialog.component';

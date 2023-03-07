@@ -53,8 +53,8 @@ export class OptionsBarComponent implements OnInit, OnDestroy {
       this.selectedFolders = selectedFolders
     });
 
-    this.navigatorSubscription = this.navigatorStore.select("navigator").subscribe(res => {
-      this.navigatorState = res;
+    this.navigatorSubscription = this.navigatorStore.select("stack").subscribe(res => {
+      this.navigatorState.stack = res;
     });
 
     this.router.events.pipe(

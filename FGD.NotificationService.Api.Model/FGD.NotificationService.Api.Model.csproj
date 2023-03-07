@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\fakegoogledrive\FGD.SharedTypes\FGD.SharedTypes.csproj" />
+    <ProjectReference Include="..\FGD.SharedTypes\FGD.SharedTypes.csproj" />
   </ItemGroup>
 
 </Project>

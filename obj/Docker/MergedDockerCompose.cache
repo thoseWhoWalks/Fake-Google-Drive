@@ -1,15 +1,8 @@
-networks:
-  default:
-    external:
-      name: nat
-  static-network:
-    ipam:
-      config:
-      - subnet: 172.20.0.0/16
+name: dockercompose9212596559403156606
 services:
   fgd.api:
     build:
-      context: C:\fakegoogledrive
+      context: D:\Code\FakeGoogleDrive
       dockerfile: FakeGoogleDrive\Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -18,6 +11,13 @@ services:
       static-network:
         ipv4_address: 172.20.129.2
     ports:
-    - published: 5000
+    - mode: ingress
       target: 80
-version: '3.4'
+      published: "5000"
+      protocol: tcp
+networks:
+  static-network:
+    name: dockercompose9212596559403156606_static-network
+    ipam:
+      config:
+      - subnet: 172.20.0.0/16

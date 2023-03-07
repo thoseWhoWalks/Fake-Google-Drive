@@ -15,3 +15,13 @@ C:\fakegoogledrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.Assem
 C:\fakegoogledrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.AssemblyInfo.cs
 C:\fakegoogledrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.dll
 C:\fakegoogledrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.pdb
+D:\Code\FakeGoogleDrive\FGD.SharedTypes\bin\Debug\netcoreapp2.2\FGD.SharedTypes.deps.json
+D:\Code\FakeGoogleDrive\FGD.SharedTypes\bin\Debug\netcoreapp2.2\FGD.SharedTypes.dll
+D:\Code\FakeGoogleDrive\FGD.SharedTypes\bin\Debug\netcoreapp2.2\FGD.SharedTypes.pdb
+D:\Code\FakeGoogleDrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.csproj.AssemblyReference.cache
+D:\Code\FakeGoogleDrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\FakeGoogleDrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.AssemblyInfoInputs.cache
+D:\Code\FakeGoogleDrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.AssemblyInfo.cs
+D:\Code\FakeGoogleDrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.csproj.CoreCompileInputs.cache
+D:\Code\FakeGoogleDrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.dll
+D:\Code\FakeGoogleDrive\FGD.SharedTypes\obj\Debug\netcoreapp2.2\FGD.SharedTypes.pdb

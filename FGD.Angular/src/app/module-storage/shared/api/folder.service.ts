@@ -20,8 +20,8 @@ export class FolderService {
         private folderStore: Store<FolderState>,
         private navigatorStore: Store<NavigatorState>
     ) {
-        this.navigatorStore.select("navigator").subscribe(({ stack }) => {
-            this.navigatorState = stack.instance
+        this.navigatorStore.select("stack").subscribe(({ instance }) => {
+            this.navigatorState = instance
         });
 
         this.userId = Number.parseInt(localStorage.getItem("userId"));

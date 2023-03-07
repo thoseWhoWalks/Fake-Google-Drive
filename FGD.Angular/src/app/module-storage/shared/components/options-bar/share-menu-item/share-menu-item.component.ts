@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { ShareDialog } from './share-item-dialog/share-dialog.component';
 
 import { Store } from '@ngrx/store';

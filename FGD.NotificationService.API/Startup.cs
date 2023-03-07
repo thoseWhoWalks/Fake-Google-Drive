@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace FGD.NotificationService.Api
 {
@@ -17,16 +17,18 @@ namespace FGD.NotificationService.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+
             services.AddCors();
 
             services.AddSignalR();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc();
 
             services.AddSingleton<NotifyHub>();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
             app.UseCors(
@@ -43,13 +45,13 @@ namespace FGD.NotificationService.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseRouting();
              
-            app.UseSignalR(routes =>
+            app.UseEndpoints(routes =>
             {
                 routes.MapHub<NotifyHub>("/notify");
             });
-
-            app.UseMvc();
         }
     }
 }

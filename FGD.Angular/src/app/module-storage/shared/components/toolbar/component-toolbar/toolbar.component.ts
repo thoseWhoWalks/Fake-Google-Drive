@@ -7,7 +7,7 @@ import { Observable, Subscription } from 'rxjs';
 import { Notifications } from 'src/app/redux/transfer-models/notification.model.transfer';
 import { MarkAllAsRead } from 'src/app/redux/actions/notification.action'; 
 import { NotificationState } from '../../../types/notification-state.type';
-import { MatMenuTrigger } from '@angular/material';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { NotificationService } from '../../../api/notification.service';
 import { ClearFolders } from 'src/app/redux/actions/folder.action';
 import { ClearFiles } from 'src/app/redux/actions/file.action';
@@ -41,11 +41,12 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 
     this.notifictionsState = this.notificationStore.select("notificationPage");
 
-    this.subscription = this.authStore.select("notificationPage").subscribe(res => {
+    this.subscription = this.authStore.select("authPage").subscribe(res => {
        
-       this.notifications = res.notifications;
+       this.notifications = res;
 
-       this.newNotificationsCount =  res.notifications.filter(e => e.notificationState == NotificationState.New).length;
+       this.notifictionsState.subscribe(notifications => 
+          this.newNotificationsCount = notifications.notifications.filter(e => e.notificationState == NotificationState.New).length);
 
     });
 

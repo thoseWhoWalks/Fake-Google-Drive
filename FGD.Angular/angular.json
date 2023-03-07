@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "FGDv1"
+  "defaultProject": "FGDv1",
+  "cli": {
+    "analytics": false
+  }
 }

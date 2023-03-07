@@ -1,11 +1,13 @@
 ﻿using FGD.Api.Configuration;
 using FGD.Configuration;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace FakeGoogleDrive
 {
@@ -21,6 +23,8 @@ namespace FakeGoogleDrive
         public void ConfigureServices(IServiceCollection services)
         {
             ServiceConfigurationExtention.Configuration = Configuration;
+
+            services.AddControllers();
 
             services.SetUpOptions();
 
@@ -38,15 +42,13 @@ namespace FakeGoogleDrive
 
             AutoMapperConfig.Configure();
 
-            services.AddMvc()
-                .AddFluentValidation(op => op.RegisterValidatorsFromAssembly(GetType().Assembly))
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddValidatorsFromAssemblyContaining<Startup>();
 
-           
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
@@ -59,9 +61,14 @@ namespace FakeGoogleDrive
 
             app.UseStaticFilesWithChaching();
 
+            app.UseRouting();
+
             app.UseAuthentication();
 
-            app.UseMvc();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

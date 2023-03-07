@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.271
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.Api", "FakeGoogleDrive\FGD.Api.csproj", "{D0B0D985-4DB8-4CB5-8D77-59BD56DD7DE6}"
 EndProject
@@ -29,9 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.NotificationService.Api
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FAC826F2-BBFF-46DD-AC78-F00783A49305}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.NotificationService.Api.Model", "FGD.NotificationService.Api.Model\FGD.NotificationService.Api.Model.csproj", "{CE7600A1-B673-4D20-B10A-27AB94C7C694}"
+EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FGD.Angular", "FGD.Angular\", "{1150073E-554B-42DA-9B9C-9AB60BF5D76C}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_50491"
 		Debug.AspNetCompiler.PhysicalPath = "FGD.Angular\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50491\"
@@ -49,8 +51,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FGD.Angular", "FGD.Angular\
 		VWDPort = "50491"
 		SlnRelativePath = "FGD.Angular\"
 	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FGD.NotificationService.Api.Model", "FGD.NotificationService.Api.Model\FGD.NotificationService.Api.Model.csproj", "{CE7600A1-B673-4D20-B10A-27AB94C7C694}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,14 +102,14 @@ Global
 		{FAC826F2-BBFF-46DD-AC78-F00783A49305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAC826F2-BBFF-46DD-AC78-F00783A49305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAC826F2-BBFF-46DD-AC78-F00783A49305}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{CE7600A1-B673-4D20-B10A-27AB94C7C694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CE7600A1-B673-4D20-B10A-27AB94C7C694}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE7600A1-B673-4D20-B10A-27AB94C7C694}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE7600A1-B673-4D20-B10A-27AB94C7C694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1150073E-554B-42DA-9B9C-9AB60BF5D76C}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,28 +1,36 @@
-networks:
-  default:
-    external:
-      name: nat
-  static-network:
-    ipam:
-      config:
-      - subnet: 172.20.0.0/16
+name: dockercompose9212596559403156606
 services:
   fgd.api:
     build:
-      context: C:\fakegoogledrive
+      context: D:\Code\FakeGoogleDrive
       dockerfile: FakeGoogleDrive\Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: FGD.Api
       target: base
-    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus
-      /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
+    container_name: FGD.Api
+    entrypoint:
+    - C:\remote_debugger\x64\msvsmon.exe
+    - /noauth
+    - /anyuser
+    - /silent
+    - /nostatus
+    - /noclrwarn
+    - /nosecuritywarn
+    - /nofirewallwarn
+    - /nowowwarn
+    - /timeout:2147483646
+    - /LogDebuggeeOutputToStdOut
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
       NUGET_FALLBACK_PACKAGES: c:\.nuget\fallbackpackages
       NUGET_PACKAGES: C:\.nuget\packages
     image: fgdapi:dev
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath c:\.nuget\packages
-        --additionalProbingPath c:\.nuget\fallbackpackages  bin\Debug\netcoreapp2.2\FGD.Api.dll'
+        --additionalProbingPath c:\.nuget\fallbackpackages  "C:\app\bin\Debug\net7.0\FGD.Api.dll"'
       com.microsoft.visualstudio.debuggee.killprogram: C:\remote_debugger\x64\utils\KillProcess.exe
         dotnet.exe
       com.microsoft.visualstudio.debuggee.program: '"C:\Program Files\dotnet\dotnet.exe"'
@@ -31,11 +39,54 @@ services:
       static-network:
         ipv4_address: 172.20.129.2
     ports:
-    - published: 5000
+    - mode: ingress
       target: 80
+      published: "5000"
+      protocol: tcp
     volumes:
-    - C:\fakegoogledrive\FakeGoogleDrive:C:\app:rw
-    - C:\Users\VY_Owner\onecoremsvsmon\15.0.28307.421:C:\remote_debugger:ro
-    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:c:\.nuget\fallbackpackages:ro
-    - C:\Users\VY_Owner\.nuget\packages:c:\.nuget\packages:ro
-version: '3.4'
+    - type: bind
+      source: D:\Code\FakeGoogleDrive\FakeGoogleDrive
+      target: C:\app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: D:\Code\FakeGoogleDrive
+      target: C:\src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Appartments-PC\onecoremsvsmon\17.5.20124.2323
+      target: C:\remote_debugger
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Appartments-PC\.nuget\packages\
+      target: c:\.nuget\packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+      target: c:\.nuget\fallbackpackages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Appartments-PC\AppData\Roaming/ASP.NET/Https
+      target: C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Appartments-PC\AppData\Roaming/Microsoft/UserSecrets
+      target: C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  static-network:
+    name: dockercompose9212596559403156606_static-network
+    ipam:
+      config:
+      - subnet: 172.20.0.0/16

@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy  } from '@angular/core';
-import { MatBottomSheet } from '@angular/material'; 
+import { MatBottomSheet } from '@angular/material/bottom-sheet'; 
 import { InfoBottomSheet } from './info-bottom-sheet/info-bottom-sheet.component';
 
 @Component({

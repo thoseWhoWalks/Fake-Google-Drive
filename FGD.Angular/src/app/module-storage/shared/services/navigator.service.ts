@@ -23,8 +23,8 @@ export class NavigatorService{
         private sharedFileService : SharedFileService,
         private navigatorStore: Store<NavigatorState>
         ){
-            this.navigatorStore.select("navigator").subscribe(({stack})=>{
-                this.navigatorState = stack.instance
+            this.navigatorStore.select("stack").subscribe(({instance})=>{
+                this.navigatorState = instance
             }) ;
         }
 

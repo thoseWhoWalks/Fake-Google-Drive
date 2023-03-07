@@ -7,14 +7,14 @@ namespace FGD.Bussines.Service.Helper
 {
     public class ImageSharpHelper
     {
-        private Image<Rgba32> image = null; 
+        private Image image = null; 
          
         public ImageSharpHelper()
         {
             
         }
 
-        public Image<Rgba32> ResizeThumbnail(int h, int w, Stream imageStream)
+        public Image ResizeThumbnail(int h, int w, Stream imageStream)
         {
 
             this.image = Image.Load(imageStream);

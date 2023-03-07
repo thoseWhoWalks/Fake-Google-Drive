@@ -24,3 +24,16 @@ C:\fakegoogledrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.Assembl
 C:\fakegoogledrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.csproj.CopyComplete
 C:\fakegoogledrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.dll
 C:\fakegoogledrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.pdb
+D:\Code\FakeGoogleDrive\FGD.Encryption\bin\Debug\netcoreapp2.2\FGD.Encryption.deps.json
+D:\Code\FakeGoogleDrive\FGD.Encryption\bin\Debug\netcoreapp2.2\FGD.Encryption.runtimeconfig.json
+D:\Code\FakeGoogleDrive\FGD.Encryption\bin\Debug\netcoreapp2.2\FGD.Encryption.runtimeconfig.dev.json
+D:\Code\FakeGoogleDrive\FGD.Encryption\bin\Debug\netcoreapp2.2\FGD.Encryption.dll
+D:\Code\FakeGoogleDrive\FGD.Encryption\bin\Debug\netcoreapp2.2\FGD.Encryption.pdb
+D:\Code\FakeGoogleDrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.csproj.AssemblyReference.cache
+D:\Code\FakeGoogleDrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\FakeGoogleDrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.AssemblyInfoInputs.cache
+D:\Code\FakeGoogleDrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.AssemblyInfo.cs
+D:\Code\FakeGoogleDrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.csproj.CoreCompileInputs.cache
+D:\Code\FakeGoogleDrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.dll
+D:\Code\FakeGoogleDrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.pdb
+D:\Code\FakeGoogleDrive\FGD.Encryption\obj\Debug\netcoreapp2.2\FGD.Encryption.genruntimeconfig.cache
