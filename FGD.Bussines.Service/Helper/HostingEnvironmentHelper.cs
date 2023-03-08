@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.Extensions.Hosting;
 using System;
 using System.IO;
 using System.Web.Helpers;
@@ -7,9 +7,9 @@ namespace FGD.Bussines.Service.Helper
 {
     public class HostingEnvironmentHelper
     {
-        private IHostingEnvironment _hostingEnvironment;
+        private IHostEnvironment _hostingEnvironment;
 
-        public HostingEnvironmentHelper(IHostingEnvironment hostingEnvironment)
+        public HostingEnvironmentHelper(IHostEnvironment hostingEnvironment)
         {
             this._hostingEnvironment = hostingEnvironment;
         }

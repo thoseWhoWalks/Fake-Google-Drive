@@ -1,7 +1,6 @@
 ﻿using FGD.Bussines.Model;
 using FGD.Bussines.Service.Helper;
 using FGD.Data.Service;
-using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.IO;
