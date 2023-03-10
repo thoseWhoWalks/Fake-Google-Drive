@@ -1,7 +1,6 @@
-﻿using Microsoft.Extensions.Hosting;
-using System;
+﻿using FGD.Encryption.Helpers;
+using Microsoft.Extensions.Hosting;
 using System.IO;
-using System.Web.Helpers;
 
 namespace FGD.Bussines.Service.Helper
 {
@@ -16,7 +15,7 @@ namespace FGD.Bussines.Service.Helper
 
         public string CreateRootFolder()
         {
-            string rootProjectFolder = this._hostingEnvironment.ContentRootPath + "\\storage\\" + Crypto.Hash("".GerRandomString());
+            string rootProjectFolder = this._hostingEnvironment.ContentRootPath + "\\storage\\" + SHA256HashHelper .Hash("".GerRandomString());
 
             if (!Directory.Exists(rootProjectFolder))
                 Directory.CreateDirectory(rootProjectFolder);

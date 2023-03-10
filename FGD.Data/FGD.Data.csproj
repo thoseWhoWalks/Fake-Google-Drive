@@ -13,10 +13,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="System.Web.Helpers.Crypto" Version="3.2.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FGD.Encryption\FGD.Encryption.csproj" />
     <ProjectReference Include="..\FGD.SharedTypes\FGD.SharedTypes.csproj" />
   </ItemGroup>
 

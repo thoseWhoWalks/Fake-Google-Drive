@@ -2,11 +2,11 @@
 using FGD.Bussines.Model;
 using FGD.Configuration;
 using FGD.Data.Service;
+using FGD.Encryption.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.Helpers;
 
 namespace FGD.Bussines.Service 
 {
@@ -37,7 +37,7 @@ namespace FGD.Bussines.Service
             
             mappedModel.Path = await this.GetRootFolderPathByUserIdAsync(UserId);
 
-            mappedModel.HashTitle = Crypto.Hash(mappedModel.Title);
+            mappedModel.HashTitle = SHA256HashHelper.Hash(mappedModel.Title);
 
             var res = await this._storedFolderRepository.CreateAsync(
                   mappedModel

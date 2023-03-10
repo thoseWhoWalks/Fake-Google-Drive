@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using System.Web.Helpers;
+﻿using FGD.Encryption.Helpers;
+using System.Linq;
 
 namespace FGD.Data.Initializer
 {
@@ -26,14 +26,14 @@ namespace FGD.Data.Initializer
             #endregion
 
             #region insert account
-            string salt = Crypto.GenerateSalt();
+            var saltedHash = Pbkdf2KeyDerivationHelper.GenerateSaltedHash("123");
 
             var account = context.Accounts.Add(new AccountModel<int>()
             {
                 Email = "creatom@mail.com",
                 Role = "Admin",
-                Salt = salt,
-                PasswordHash = Crypto.HashPassword("123" + salt)
+                Salt = saltedHash.Salt,
+                PasswordHash = saltedHash.Hash
             });
 
             context.SaveChanges();

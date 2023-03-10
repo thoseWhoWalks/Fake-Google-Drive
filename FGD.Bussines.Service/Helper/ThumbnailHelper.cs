@@ -1,10 +1,10 @@
-﻿using FGD.SharedTypes.Enums;
+﻿using FGD.Encryption.Helpers;
+using FGD.SharedTypes.Enums;
 using FGD.SharedTypes.Fabrics;
 using SixLabors.ImageSharp;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Web.Helpers;
 
 namespace FGD.Bussines.Service.Helper
 {
@@ -83,8 +83,8 @@ namespace FGD.Bussines.Service.Helper
 
         private string GetFullPathToThumbnail()
         {
-            return this._hostingEnvironmentHelper.CreateThumbnailFolder() + "//" + 
-                Crypto.Hash("".GerRandomString()) + ".jpg";
+            return this._hostingEnvironmentHelper.CreateThumbnailFolder() + "//" +
+                SHA256HashHelper.Hash("".GerRandomString()) + ".jpg";
         }
          
     }

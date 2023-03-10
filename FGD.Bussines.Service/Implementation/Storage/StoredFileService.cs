@@ -3,13 +3,13 @@ using FGD.Bussines.Model;
 using FGD.Bussines.Service.Helper;
 using FGD.Configuration;
 using FGD.Data.Service;
+using FGD.Encryption.Helpers;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Mime;
 using System.Threading.Tasks;
-using System.Web.Helpers;
 
 namespace FGD.Bussines.Service
 {
@@ -94,7 +94,7 @@ namespace FGD.Bussines.Service
 
             mappedModel.Title = Path.GetFileNameWithoutExtension(file.FileName);
 
-            mappedModel.HashedTitle = Crypto.Hash("".GerRandomString()) +
+            mappedModel.HashedTitle = SHA256HashHelper.Hash("".GerRandomString()) +
                 Path.GetExtension(file.FileName);
 
             mappedModel.SizeInKbs = file.Length.BytesToKilobytes();

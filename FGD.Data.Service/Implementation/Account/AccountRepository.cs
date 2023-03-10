@@ -1,13 +1,13 @@
 ﻿using FGD.Api.Model;
 using FGD.Bussines.Model;
 using FGD.Configuration;
+using FGD.Encryption.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Helpers;
 
 namespace FGD.Data.Service
 {
@@ -59,7 +59,7 @@ namespace FGD.Data.Service
             IList<AccountModelBussines<int>> accountApiModels = new List<AccountModelBussines<int>>();
             var accounts = await _context.Accounts.ToListAsync();
             var accountInfos = await _context.AccountInfos.ToListAsync();
-            
+
             foreach (var acc in accounts)
             {
                 var accInfo = accountInfos.FirstOrDefault(ai => ai.AccountId == acc.Id);
@@ -89,7 +89,7 @@ namespace FGD.Data.Service
         {
             var acc = await _context.Accounts.FirstOrDefaultAsync(a => a.Email == email);
             var accInfo = await _context.AccountInfos.FirstOrDefaultAsync(ai => ai.AccountId == acc.Id);
-            
+
             return Tuple.Create(acc, accInfo);
         }
 
@@ -101,7 +101,7 @@ namespace FGD.Data.Service
             return AutoMapperConfig.Mapper.Map<AccountModelBussines<int>>(accInfo).Map(acc);
 
         }
-         
+
         public async Task<AccountModelBussines<int>> UpdateAsync(int id, AccountModelBussines<int> model)
         {
             var accAccInfo = await GetRawByIdAsync(id);
@@ -125,8 +125,8 @@ namespace FGD.Data.Service
             if (accountAccountInfo == null)
                 return false;
 
-            bool res = Crypto.VerifyHashedPassword(accountAccountInfo.Item1.PasswordHash,
-                model.Password + accountAccountInfo.Item1.Salt);
+            bool res = Pbkdf2KeyDerivationHelper.IsHashValid(model.Password, accountAccountInfo.Item1.PasswordHash,
+                accountAccountInfo.Item1.Salt);
 
             if (res)
                 return true;
@@ -147,18 +147,18 @@ namespace FGD.Data.Service
 
         private async Task<EntityEntry<AccountModel<int>>> CreateAccountAsync(AccountModelBussines<int> model)
         {
-            var salt = Crypto.GenerateSalt();
+            var saltedHash = Pbkdf2KeyDerivationHelper.GenerateSaltedHash(model.Password);
 
             var accMapped = AutoMapperConfig.Mapper.Map<AccountModel<int>>(model);
 
-            accMapped.PasswordHash = Crypto.HashPassword(model.Password + salt);
-            accMapped.Salt = salt;
+            accMapped.PasswordHash = saltedHash.Hash;
+            accMapped.Salt = saltedHash.Salt;
 
             var acc = await _context.Accounts.AddAsync(accMapped);
             await _context.SaveChangesAsync();
             return acc;
         }
-        
+
         internal async Task<Tuple<AccountModel<int>, AccountInfoModel<int>>> GetRawByIdAsync(int id)
         {
             var acc = await _context.Accounts.FirstOrDefaultAsync(a => a.Id == id);
@@ -186,8 +186,10 @@ namespace FGD.Data.Service
 
             if (model.Password != null)
             {
-                acc.Salt = Crypto.GenerateSalt();
-                acc.PasswordHash = Crypto.HashPassword(model.Password);
+                var saltedHash = Pbkdf2KeyDerivationHelper.GenerateSaltedHash(model.Password);
+
+                acc.Salt = saltedHash.Salt;
+                acc.PasswordHash = saltedHash.Hash;
             }
 
             _context.Accounts.Update(acc);
