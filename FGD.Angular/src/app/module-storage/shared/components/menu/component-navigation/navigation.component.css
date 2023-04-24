@@ -52,3 +52,6 @@ mat-nav-list{
     width: 90% !important;
 }
  
+.mdc-list-item:hover::before, .mdc-list-item:focus::before {
+    background-color: transparent !important;
+}
