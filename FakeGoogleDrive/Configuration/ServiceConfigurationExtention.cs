@@ -99,7 +99,7 @@ namespace FGD.Api.Configuration
             services.AddDbContext<FakeGoogleDriveContext>(dbContextOptions =>
             {
                 dbContextOptions.UseSqlServer(
-                _Configuration.GetConnectionString("MSSqlConnection")
+                _Configuration.GetConnectionString("MSSqlConnectionDocker")
                 );
             },ServiceLifetime.Transient);
         }

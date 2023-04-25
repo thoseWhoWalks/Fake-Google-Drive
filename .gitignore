@@ -581,3 +581,6 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore,angular,visualstudiocode,defold,visualstudio
+/db
+/FakeGoogleDrive/storage/8782406FE1D633785155C96462B7A5DB7629A72850EF438FABBB4FA22288B124
+/FakeGoogleDrive/thumbnails
