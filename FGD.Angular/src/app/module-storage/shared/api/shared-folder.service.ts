@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 
 import { Store } from '@ngrx/store';
 import { FolderState } from 'src/app/redux/app.state';
-import { LoadFolders } from 'src/app/redux/actions/folder.action';
 
 import { SharedFolderModel } from '../models/shared-folder.model';
 import { FolderModel } from '../models/folder.model';
 
 import { HttpClientHelper } from 'src/app/shared/helper/http-client.helper';
+import { FolderApiActions } from 'src/app/redux/actions/folder.action';
 
 @Injectable()
 export class SharedFolderService {
@@ -27,7 +27,7 @@ export class SharedFolderService {
         this.httpClientHelper.Get<FolderModel[]>(this.SHARED_FOLDER_API + ui).subscribe(data => {
 
             if (data.ok)
-                this.folderStore.dispatch(new LoadFolders(data.item));
+                this.folderStore.dispatch(FolderApiActions.load_folders({ folders: data.item }));
             else
                 console.error(data.errors[0].message);
         });

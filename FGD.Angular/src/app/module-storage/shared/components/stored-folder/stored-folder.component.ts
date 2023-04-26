@@ -1,13 +1,14 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FolderModel } from '../../models/folder.model';
-import { ProcessSelectionFolder } from 'src/app/redux/actions/folder.action';
 import { Store } from '@ngrx/store';
 import { FolderState, NavigatorState, FileState } from 'src/app/redux/app.state';
 import { Observable } from 'rxjs';
 import { Folders } from 'src/app/redux/transfer-models/folder.model.transfer';
-import { PushFolder } from 'src/app/redux/actions/navigator.actions';
 import { FolderService } from '../../api/folder.service';
 import { FileService } from '../../api/file.service';
+import { NavigatorPageActions } from 'src/app/redux/actions/navigator.actions';
+import { FolderPageAction } from 'src/app/redux/actions/folder.action';
+import { selectFolders } from 'src/app/redux/selectors/folder.selector';
 
 @Component({
   selector: 'app-stored-folder',
@@ -25,7 +26,7 @@ export class StoredFolderComponent implements OnInit {
                }
 
   ngOnInit() {
-    this.foldersState = this.folderStore.select("folderPage");
+    this.foldersState = this.folderStore.select(selectFolders);
   }
 
   foldersState: Observable<Folders>;
@@ -38,7 +39,7 @@ export class StoredFolderComponent implements OnInit {
 
     this.isSelected = !this.isSelected;
 
-    this.folderStore.dispatch(new ProcessSelectionFolder(
+    this.folderStore.dispatch(FolderPageAction.process_selection_folder(
          this.folder
     ))
  }
@@ -50,7 +51,7 @@ export class StoredFolderComponent implements OnInit {
         return;
     }
 
-    this.navigator.dispatch(new PushFolder(
+    this.navigator.dispatch(NavigatorPageActions.push_folder(
       this.folder
     ))
 

@@ -4,15 +4,16 @@ import { FolderModel } from '../models/folder.model';
 
 import { Store } from '@ngrx/store';
 import { FolderState, NavigatorState } from 'src/app/redux/app.state';
-import { LoadFolders, DeleteFolder, AddFolder, UpdateFolder } from 'src/app/redux/actions/folder.action';
 
 import { HttpClientHelper } from 'src/app/shared/helper/http-client.helper';
+import { FolderApiActions, FolderPageAction } from 'src/app/redux/actions/folder.action';
+import { selectNavigator } from 'src/app/redux/selectors/navigator.selector';
 
 
 @Injectable()
 export class FolderService {
 
-    navigatorState: Array<FolderModel>;
+    navigatorState: NavigatorState;
 
     userId: number = 0;
 
@@ -20,8 +21,8 @@ export class FolderService {
         private folderStore: Store<FolderState>,
         private navigatorStore: Store<NavigatorState>
     ) {
-        this.navigatorStore.select("stack").subscribe(({ instance }) => {
-            this.navigatorState = instance
+        this.navigatorStore.select(selectNavigator).subscribe(navigator => {
+            this.navigatorState = navigator
         });
 
         this.userId = Number.parseInt(localStorage.getItem("userId"));
@@ -39,7 +40,7 @@ export class FolderService {
         this.httpClientHelper.Get<FolderModel[]>(this.FOLDER_GETBYROOT_API + this.userId).subscribe(data => {
 
             if (data.ok)
-                this.folderStore.dispatch(new LoadFolders(data.item));
+                this.folderStore.dispatch(FolderApiActions.load_folders({ folders: data.item}));
             else
                 console.error(data.errors[0].message);
         });
@@ -49,8 +50,9 @@ export class FolderService {
 
         this.httpClientHelper.Get<FolderModel[]>(this.FOLDER_GET_BY_PARENT_FOLDER_ID + id).subscribe(data => {
 
+            debugger
             if (data.ok)
-                this.folderStore.dispatch(new LoadFolders(data.item));
+                this.folderStore.dispatch(FolderApiActions.load_folders({ folders: data.item}));
             else
                 console.error(data.errors[0].message);
         });
@@ -61,7 +63,7 @@ export class FolderService {
         this.httpClientHelper.Get<FolderModel[]>(this.FILE_GET_DELETED + this.userId).subscribe(data => {
 
             if (data.ok)
-                this.folderStore.dispatch(new LoadFolders(data.item));
+                this.folderStore.dispatch(FolderApiActions.load_folders({ folders: data.item}));
             else
                 console.error(data.errors[0].message);
         });
@@ -76,7 +78,7 @@ export class FolderService {
             .subscribe(data => {
 
                 if (data.ok)
-                    this.folderStore.dispatch(new UpdateFolder(data.item));
+                    this.folderStore.dispatch(FolderPageAction.update_folder(data.item));
                 else
                     console.error(data.errors[0].message);
             }
@@ -94,7 +96,7 @@ export class FolderService {
             .subscribe(data => {
 
                 if (data.ok)
-                    this.folderStore.dispatch(new AddFolder(data.item));
+                    this.folderStore.dispatch(FolderPageAction.add_folder(data.item));
                 else
                     console.error(data.errors[0].message);
             });
@@ -106,15 +108,15 @@ export class FolderService {
         this.httpClientHelper.Delete<FolderModel>(this.STORED_FOLDER_API + id).subscribe(data => {
 
             if (data.ok)
-                this.folderStore.dispatch(new DeleteFolder(data.item));
+                this.folderStore.dispatch(FolderPageAction.delete_folder(data.item));
             else
                 console.error(data.errors[0].message);
         });
     }
 
     public GetCurrentFolderIdOrNull(): number {
-        if (this.navigatorState.length > 0)
-            return this.navigatorState[this.navigatorState.length - 1].id
+        if (this.navigatorState.stack.instance.length > 0)
+            return this.navigatorState[this.navigatorState.stack.instance.length - 1].id
 
         return null;
     }

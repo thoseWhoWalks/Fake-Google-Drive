@@ -14,6 +14,8 @@ import { FileModel } from '../../../models/file.model';
 
 import { SharedFolderService } from '../../../api/shared-folder.service';
 import { SharedFileService } from '../../../api/shared-file.service';
+import { selectFolders } from 'src/app/redux/selectors/folder.selector';
+import { selectFiles } from 'src/app/redux/selectors/file.selector';
 
 @Component({
   selector: 'share-menu-item',
@@ -23,11 +25,11 @@ export class ShareMenuItem implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
-    this.selectedFilesSubscription = this.fileStore.select("filePage").subscribe(({ selectedFiles }) => {
+    this.selectedFilesSubscription = this.fileStore.select(selectFiles).subscribe(({ selectedFiles }) => {
       this.selectedFiles = selectedFiles;
     });
 
-    this.selectedFoldersSubscription = this.folderStore.select("folderPage").subscribe(({ selectedFolders }) => {
+    this.selectedFoldersSubscription = this.folderStore.select(selectFolders).subscribe(({ selectedFolders }) => {
       this.selectedFolders = selectedFolders;
     });
   }

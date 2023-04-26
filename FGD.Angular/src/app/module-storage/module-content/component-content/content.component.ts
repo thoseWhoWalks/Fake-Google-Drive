@@ -11,6 +11,8 @@ import { FileState, FolderState } from 'src/app/redux/app.state';
 import { Observable } from 'rxjs';
 import { Files } from 'src/app/redux/transfer-models/file.model.transfer';
 import { Folders } from 'src/app/redux/transfer-models/folder.model.transfer';
+import { selectFolders } from 'src/app/redux/selectors/folder.selector';
+import { selectFiles } from 'src/app/redux/selectors/file.selector';
 
 @Component({
   selector: 'app-content',
@@ -43,8 +45,10 @@ export class ContentComponent implements OnInit {
   dropZoneActive: boolean;
 
   ngOnInit() {
-    this.filesState = this.store.select("filePage");
-    this.foldersState = this.folderStore.select("folderPage");
+    this.filesState = this.store.select(selectFiles);
+    this.foldersState = this.folderStore.select(selectFolders);
+
+    this.folderStore.select(selectFolders).subscribe(res => console.log(res));
   }
 
   handleDrop(files: FileList) {

@@ -6,6 +6,8 @@ import { Subscription } from 'rxjs';
 
 import { FileModel } from '../../../../models/file.model';
 import { FolderModel } from '../../../../models/folder.model';
+import { selectFolders } from 'src/app/redux/selectors/folder.selector';
+import { selectFiles } from 'src/app/redux/selectors/file.selector';
 
 @Component({
     selector: 'info-bottom-sheet',
@@ -21,11 +23,11 @@ export class InfoBottomSheet implements OnInit, OnDestroy {
 
     ngOnInit() {
 
-        this.subscriptionSelectedFiles = this.fileStore.select("filePage").subscribe(({ selectedFiles }) => {
+        this.subscriptionSelectedFiles = this.fileStore.select(selectFiles).subscribe(({ selectedFiles }) => {
             this.selectedFiles = selectedFiles;
         });
 
-        this.subscriptionSelectedFolders = this.folderSotre.select("folderPage").subscribe(({ selectedFolders }) => {
+        this.subscriptionSelectedFolders = this.folderSotre.select(selectFolders).subscribe(({ selectedFolders }) => {
             this.selectedFolders = selectedFolders
         });
 

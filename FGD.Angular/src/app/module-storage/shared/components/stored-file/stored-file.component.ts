@@ -4,7 +4,8 @@ import { FileState } from 'src/app/redux/app.state';
 import { Observable } from 'rxjs';
 import { Files } from 'src/app/redux/transfer-models/file.model.transfer';
 import { FileModel } from '../../models/file.model';
-import { ProcessSelectionFile } from 'src/app/redux/actions/file.action';
+import { FilePageAction } from 'src/app/redux/actions/file.action';
+import { selectFiles } from 'src/app/redux/selectors/file.selector';
 
 @Component({
   selector: 'app-stored-file',
@@ -18,7 +19,7 @@ export class StoredFileComponent implements OnInit {
   filesState: Observable<Files>;
 
   ngOnInit() {
-    this.filesState = this.store.select("filePage"); 
+    this.filesState = this.store.select(selectFiles); 
     this.resolveThumbnail()
   } 
 
@@ -33,7 +34,7 @@ export class StoredFileComponent implements OnInit {
     console.log(this.file);
     this.isSelected = !this.isSelected;
 
-     this.store.dispatch(new ProcessSelectionFile(
+     this.store.dispatch(FilePageAction.process_selection_file(
           this.file
      ))
   }

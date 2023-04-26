@@ -11,8 +11,10 @@ import { Files } from 'src/app/redux/transfer-models/file.model.transfer';
 import { FileState, FolderState } from 'src/app/redux/app.state';
 import { Store } from '@ngrx/store';
 import { Folders } from 'src/app/redux/transfer-models/folder.model.transfer'; 
-import { ProcessSelectionFile } from 'src/app/redux/actions/file.action';
-import { ProcessSelectionFolder } from 'src/app/redux/actions/folder.action';
+import { FolderPageAction } from 'src/app/redux/actions/folder.action';
+import { selectFolders } from 'src/app/redux/selectors/folder.selector';
+import { FilePageAction } from 'src/app/redux/actions/file.action';
+import { selectFiles } from 'src/app/redux/selectors/file.selector';
 
 @Component({
   selector: 'app-bin',
@@ -35,20 +37,20 @@ export class BinComponent implements OnInit {
     this.fileService.GetDeletedByUserId();
     this.folderService.GetDeletedByUserId();
 
-    this.filesState = this.store.select("filePage"); 
-    this.foldersState = this.folderStore.select("folderPage");
+    this.filesState = this.store.select(selectFiles); 
+    this.foldersState = this.folderStore.select(selectFolders);
   }
 
   onFileClicked(file:FileModel){
 
-     this.store.dispatch(new ProcessSelectionFile(
+     this.store.dispatch(FilePageAction.process_selection_file(
           file
      ))
   }
 
     onFolderClicked(folder:FolderModel){ 
 
-     this.store.dispatch(new ProcessSelectionFolder(
+     this.store.dispatch(FolderPageAction.process_selection_folder(
           folder
      ))
   }

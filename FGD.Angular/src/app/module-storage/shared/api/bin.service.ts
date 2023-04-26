@@ -4,10 +4,11 @@ import { FileModel } from "../models/file.model";
 
 import { Store } from '@ngrx/store';
 import { FileState, FolderState } from 'src/app/redux/app.state';
-import { RestoreFile, DeleteFileForever } from 'src/app/redux/actions/file.action';
-import { DeleteFolderForever, RestoreFolder } from 'src/app/redux/actions/folder.action';
 
 import { HttpClientHelper } from 'src/app/shared/helper/http-client.helper';
+import { FolderPageAction } from 'src/app/redux/actions/folder.action';
+import { FolderModel } from '../models/folder.model';
+import { FilePageAction } from 'src/app/redux/actions/file.action';
 
 @Injectable()
 export class BinService {
@@ -31,7 +32,7 @@ export class BinService {
         this.httpClientHelper.Get<FileModel>(this.BIN_RESTORE_FILE_BY_ID_API + id).subscribe(data => {
 
             if (data.ok)
-                this.fileStore.dispatch(new RestoreFile(data.item));
+                this.fileStore.dispatch(FilePageAction.restore_file(data.item));
             else
                 console.error(data.errors[0].message);
 
@@ -43,7 +44,7 @@ export class BinService {
         this.httpClientHelper.Delete<FileModel>(this.BIN_DELETE_FILE_FOREVER_BY_ID_API + id).subscribe(data => {
 
             if (data.ok)
-                this.fileStore.dispatch(new DeleteFileForever(data.item));
+                this.fileStore.dispatch(FilePageAction.delete_file_forever(data.item));
             else
                 console.error(data.errors[0].message);
         });
@@ -51,10 +52,10 @@ export class BinService {
 
     public RestoreFolderById(id: number) {
 
-        this.httpClientHelper.Get<FileModel>(this.BIN_RESTORE_FOLDER_BY_ID_API + id).subscribe(data => {
+        this.httpClientHelper.Get<FolderModel>(this.BIN_RESTORE_FOLDER_BY_ID_API + id).subscribe(data => {
 
             if (data.ok)
-                this.folderStore.dispatch(new RestoreFolder(data.item));
+                this.folderStore.dispatch(FolderPageAction.restore_folder(data.item));
             else
                 console.error(data.errors[0].message);
         });
@@ -62,10 +63,10 @@ export class BinService {
 
     public DeleteFolderForeverById(id: number) {
 
-        this.httpClientHelper.Delete<FileModel>(this.BIN_DELETE_FOLDER_FOREVER_BY_ID_API + id).subscribe(data => {
+        this.httpClientHelper.Delete<FolderModel>(this.BIN_DELETE_FOLDER_FOREVER_BY_ID_API + id).subscribe(data => {
 
             if (data.ok)
-                this.folderStore.dispatch(new DeleteFolderForever(data.item));
+                this.folderStore.dispatch(FolderPageAction.delete_folder_forever(data.item));
             else
                 console.error(data.errors[0].message);
         });

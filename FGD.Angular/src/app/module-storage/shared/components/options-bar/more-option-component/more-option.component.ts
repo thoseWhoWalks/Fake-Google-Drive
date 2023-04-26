@@ -12,6 +12,8 @@ import { FolderModel } from '../../../models/folder.model';
 
 import { RenameDialog } from './rename-item-dialog/rename-dialog.component';
 import { Subscription } from 'rxjs';
+import { selectFolders } from 'src/app/redux/selectors/folder.selector';
+import { selectFiles } from 'src/app/redux/selectors/file.selector';
 
 @Component({
   selector: 'more-option',
@@ -22,11 +24,11 @@ import { Subscription } from 'rxjs';
 export class MoreOption implements OnInit, OnDestroy {
 
   ngOnInit(): void {
-    this.selectedFilesSubscription = this.fileStore.select("filePage").subscribe(({ selectedFiles }) => {
+    this.selectedFilesSubscription = this.fileStore.select(selectFiles).subscribe(({ selectedFiles }) => {
       this.selectedFiles = selectedFiles;
     });
 
-    this.selectedFolderSubscription = this.folderSotre.select("folderPage").subscribe(({ selectedFolders }) => {
+    this.selectedFolderSubscription = this.folderSotre.select(selectFolders).subscribe(({ selectedFolders }) => {
       this.selectedFolders = selectedFolders
     });
   }

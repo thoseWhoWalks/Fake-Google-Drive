@@ -5,11 +5,11 @@ import { FileModel } from "../models/file.model";
 
 import { Store } from '@ngrx/store';
 import { FileState } from 'src/app/redux/app.state';
-import { DeleteFile, AddFile, LoadFiles, UpdateFile } from 'src/app/redux/actions/file.action';
 
 import { saveAs } from 'file-saver';
 import { HttpClientHelper } from 'src/app/shared/helper/http-client.helper';
 import { HttpOptions } from "src/app/shared/helper/http-options";
+import { FileApiActions, FilePageAction } from 'src/app/redux/actions/file.action';
 
 @Injectable()
 export class FileService {
@@ -36,7 +36,7 @@ export class FileService {
     this.httpClientHelper.Get<FileModel[]>(this.FILE_GETBYROOT_API + this.userId).subscribe(data => {
 
       if (data.ok)
-        this.fileStore.dispatch(new LoadFiles(data.item));
+        this.fileStore.dispatch(FileApiActions.load_files({ files: data.item }));
       else
         console.error(data.errors[0].message);
     });
@@ -53,7 +53,7 @@ export class FileService {
       this.STORED_FILE_API + file.id, file).subscribe(data => {
 
         if (data.ok)
-          this.fileStore.dispatch(new UpdateFile(data.item));
+          this.fileStore.dispatch(FilePageAction.update_file(data.item));
         else
           console.error(data.errors[0].message);
       }
@@ -66,7 +66,7 @@ export class FileService {
     this.httpClientHelper.Get<FileModel[]>(this.FILE_GET_BY_PARENT_FOLDER_ID + id).subscribe(data => {
 
       if (data.ok)
-        this.fileStore.dispatch(new LoadFiles(data.item));
+        this.fileStore.dispatch(FileApiActions.load_files({ files: data.item }));
       else
         console.error(data.errors[0].message);
     });
@@ -77,7 +77,7 @@ export class FileService {
     this.httpClientHelper.Get<FileModel[]>(this.FILE_GET_DELETED + this.userId).subscribe(data => {
 
       if (data.ok)
-        this.fileStore.dispatch(new LoadFiles(data.item));
+        this.fileStore.dispatch(FileApiActions.load_files({ files: data.item }));
       else
         console.error(data.errors[0].message);
     });
@@ -104,7 +104,7 @@ export class FileService {
     this.httpClientHelper.Delete<FileModel>(this.STORED_FILE_API + id).subscribe(data => {
 
       if (data.ok)
-        this.fileStore.dispatch(new DeleteFile(data.item));
+        this.fileStore.dispatch(FilePageAction.delete_file(data.item));
       else
         console.error(data.errors[0].message);
     });
@@ -123,7 +123,7 @@ export class FileService {
       this.FILE_UPLOAD_API + this.userId, formData).subscribe(data => {
 
         if (data.ok)
-          this.fileStore.dispatch(new AddFile(data.item));
+          this.fileStore.dispatch(FilePageAction.add_file({ files: data.item }));
         else
           console.error(data.errors[0].message);
       }
