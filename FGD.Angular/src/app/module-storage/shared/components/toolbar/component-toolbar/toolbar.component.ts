@@ -39,7 +39,7 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    this.notifictionsState = this.notificationStore.select("notificationPage");
+    this.notifictionsState = this.notificationStore.select(selectNotifications);
 
     this.subscription = this.authStore.select("authPage").subscribe(res => {
        
@@ -55,7 +55,7 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 
   onExitClicked(){ 
 
-    this.authStore.dispatch(new LogOut());
+    this.authStore.dispatch(AuthPageActions.log_out());
 
     this.folderStore.dispatch(new ClearFolders());
 
@@ -74,8 +74,6 @@ export class ToolbarComponent implements OnInit, OnDestroy {
         return;
       }
     });
-
-    
 
   }
 

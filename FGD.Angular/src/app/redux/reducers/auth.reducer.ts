@@ -1,43 +1,39 @@
-import { AuthAction, AUTH_ACTION } from '../actions/auth.action';
+import { createReducer, on } from "@ngrx/store";
+import { AuthPageActions } from "../actions/auth.action";
+import { AuthState } from "../app.state";
 
-const initialState= {
-    userId : localStorage.getItem("userId"),
-    token:  localStorage.getItem("token")
-}
-
-export default function authReducer(state = initialState, action:AuthAction){
-    
-    switch(action.type){
-
-        case AUTH_ACTION.LOG_IN :{
- 
-            if(action.payload.token === null|| action.payload.token==="")
-                return state;
-
-                localStorage.setItem("token", action.payload.token); 
-                localStorage.setItem("userId", action.payload.userId); 
-   
-          return {
-             ...state,
-             userId : action.payload.id,
-             token : action.payload.token
-          }
-
-        }
- 
-        case AUTH_ACTION.LOG_OUT:{
-            
-            localStorage.removeItem("token");
-            localStorage.removeItem("userId");
-
-            return {
-                ...state,
-                token : "",
-                userId : -1
-             }
-        }
-  
-        default: return state;
+const initialState = {
+    authPage: {
+        userId: +localStorage.getItem("userId"),
+        token: localStorage.getItem("token")
     }
-
 }
+
+export const authReducer = createReducer(
+    initialState,
+    on(AuthPageActions.log_in, (state: AuthState, payload) => {
+
+        if (payload.token === null || payload.token === "")
+            return state;
+
+        localStorage.setItem("token", payload.token);
+        localStorage.setItem("userId", payload.userId);
+
+        return {
+            ...state,
+            userId: payload.userId,
+            token: payload.token
+        }
+    }),
+    on(AuthPageActions.log_out, (state: AuthState) => {
+
+        localStorage.removeItem("token");
+        localStorage.removeItem("userId");
+
+        return {
+            ...state,
+            userId: -1,
+            token: "",
+        }
+    }),
+)

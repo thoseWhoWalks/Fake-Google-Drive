@@ -6,6 +6,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { ApiResponseModel } from 'src/app/shared/model/respose/api-response.model';
 import { AuthJWTResponseModel } from '../models/auth-jwt-response.model';
 import { AccountLoginModel } from '../models/acccount-login.model';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
     headers: new HttpHeaders({ 
@@ -15,9 +16,8 @@ const httpOptions = {
 
 @Injectable()
 export class AuthService{
-
-    public API :  string = 'http://fakegoogledrive.eastus.cloudapp.azure.com:5000/api';
-    public AUTH_API : string = `${this.API}/authtorization`;
+    
+    public AUTH_API : string = `${environment.apiUrl}authtorization`;
  
     apiResponse : ApiResponseModel<AuthJWTResponseModel>;
 
@@ -29,7 +29,7 @@ export class AuthService{
         }
 
     public IsAuthenticated():boolean{
-    
+        
         var token = localStorage.getItem("token"); 
   
         if(token === null)
